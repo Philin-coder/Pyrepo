@@ -11,5 +11,7 @@ def massgen(n):
 
 
 
+
+
 if __name__ == '__main__':
     massgen(n=3)

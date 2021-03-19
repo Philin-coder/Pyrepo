@@ -14,5 +14,5 @@ class Employe(object):
 
 
 if __name__ == '__main__':
-    man = employe('111', 222, 222.2, 2)
+    man = Employe('111', 222, 222.2, 2)
     man.printer()

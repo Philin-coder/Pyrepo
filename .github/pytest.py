@@ -1,10 +1,15 @@
 import random
 
 
-def how_are_you(mstring):
-    print('Thenks,I am fine')
+def massgen(n):
+    mlist = [random.uniform(-10.0, 100.9) for i in range(n)]
+    print(*mlist)
+    for i in mlist:
+        if i>0:
+            mlist.remove(i)
+    print(mlist)
 
 
-if __name__ == "__main__":
-    mstring = input()
-    how_are_you(mstring)
+
+if __name__ == '__main__':
+    massgen(n=3)

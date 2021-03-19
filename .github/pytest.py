@@ -10,7 +10,7 @@ def massgen(n):
     print(mlist)
 
 
-
+sd
 
 
 if __name__ == '__main__':

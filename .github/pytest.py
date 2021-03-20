@@ -1,16 +1,13 @@
-import random
+import re
 
 
-def massgen(n):
-    mlist = [random.uniform(-10.0, 100.9) for i in range(n)]
-    print(*mlist)
-    for i in mlist:
-        if i>0:
-            mlist.remove(i)
-    print(mlist)
-
-
+def finddash(mstr):
+    print(mstr)
+    res = re.findall(r'-(\w+)-', mstr)
+    print(res)
+    return res
 
 
 if __name__ == '__main__':
-    massgen(n=3)
+    mstr = input()
+    finddash(mstr)

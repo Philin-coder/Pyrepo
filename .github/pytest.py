@@ -1,13 +1,12 @@
-import re
-
-
-def finddash(mstr):
-    print(mstr)
-    res = re.findall(r'-(\w+)-', mstr)
-    print(res)
-    return res
+def massgen():
+    mlist = list(map(int, input().split()))
+    print(*mlist)
+    k = 1
+    for i in range(0, len(mlist)-1):
+        if mlist[i] != mlist[i+1]:
+            k += 1
+    print(k)
 
 
 if __name__ == '__main__':
-    mstr = input()
-    finddash(mstr)
+    massgen()

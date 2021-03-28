@@ -1,26 +1,29 @@
 class SeaMap(object):
+    
     def __init__(self):
-        self.m = []
-        for row in range(10**4):
-            r = []
-            for col in range(10**4):
-                r.append('.')
-            self.m.append(r)
+        self.field = [ list('.')*10 for _ in range(10) ]
+   
+    def shoot(self, row, col, result):
+        
+        def correct(x):
+            if x<0 :
+                x = 0
+            elif x>9:
+                x = 9
+            return x
+            
+        if result == 'sink':
+            line_row = [correct(x) for x in (row-1,row,row+1)]
+            line_col = [correct(x) for x in (col-1,col,col+1)]
+            
+            for i in line_row:
+                for x in line_col:
+                    self.field[i][x] = '*'
+            self.field[row][col] = 'x'
+        elif result == 'miss':
+            self.field[row][col] = '*'
+        else:   
+            self.field[row][col] = 'x'
  
-    def shoot(self, x, y, s):
-        if s == 'miss':
-            f = '*'
-        # ...
-        self.m[x][y] = f
- 
-    def cell(self, x, y):
-        return self.m[x][y]
- 
- 
-sm = SeaMap()
-sm.shoot(2, 0, 'miss')
-sm.shoot(6, 9, 'miss')
-for row in range(10):
-    for col in range(10):
-        print(sm.cell(row, col), end='')
-    print()
+    def cell(self, row, col):
+        return self.field[row][col]

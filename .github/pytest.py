@@ -1,29 +1,18 @@
 def masgen(my_filename, fext2,n):
-    
-    def __init__(self):
-        self.field = [ list('.')*10 for _ in range(10) ]
-   
-    def shoot(self, row, col, result):
-        
-        def correct(x):
-            if x<0 :
-                x = 0
-            elif x>9:
-                x = 9
-            return x
-            
-        if result == 'sink':
-            line_row = [correct(x) for x in (row-1,row,row+1)]
-            line_col = [correct(x) for x in (col-1,col,col+1)]
-            
-            for i in line_row:
-                for x in line_col:
-                    self.field[i][x] = '*'
-            self.field[row][col] = 'x'
-        elif result == 'miss':
-            self.field[row][col] = '*'
-        else:   
-            self.field[row][col] = 'x'
+    mlist = list(map(int, input().split()))
+    res=[i for i in mlist if i % 2 != 0]
+    print(res)
+    with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
+        print(res, file=fp, sep="\n")
+def reader(my_filename, fext2):
+    with open(my_filename + '.' + fext2, 'r', encoding='utf-8') as fp:
+        data = fp.readlines()
+    print(data)
  
-    def cell(self, row, col):
-        return self.field[row][col]
+ 
+ 
+if __name__ == '__main__':
+        my_filename = None
+        fex2 = None
+        masgen(my_filename='test', fext2='txt',n=5)
+        reader(my_filename='test', fext2='txt')

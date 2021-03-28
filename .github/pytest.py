@@ -1,4 +1,4 @@
-class SeaMap(object):
+def masgen(my_filename, fext2,n):
     
     def __init__(self):
         self.field = [ list('.')*10 for _ in range(10) ]

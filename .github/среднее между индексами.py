@@ -1,0 +1,1 @@
+print((lambda s1, s2: __import__("statistics").mean(X[s1:s2]))(*map(int, input().split())))

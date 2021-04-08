@@ -26,3 +26,4 @@
 ./vsocde/
 *.json
 *.R
+pytest.py

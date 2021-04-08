@@ -17,6 +17,8 @@
 *.sln
 *.suo
 *.xaml
+*.txt
+*.jpeg
 *.pyproj
 ./hanna
 *.css

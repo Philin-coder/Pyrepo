@@ -6,8 +6,8 @@ def pal(data):
             quit()
     else:
         print("it is pal")
-
-
+ 
+ 
 if __name__ == '__main__':
     data = input()
     pal(data)

@@ -1,0 +1,1 @@
+print(max(enumerate(a), key=lambda x: abs(x[1]))[0])

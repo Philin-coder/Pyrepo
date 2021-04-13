@@ -1,27 +1,35 @@
-# В некой игре-стратегии есть солдаты и герои. 
-# У всех есть свойство, содержащее уникальный номер объекта,
-# и свойство, в котором хранится принадлежность команде.
-# У солдат есть метод "иду за героем", который в качестве аргумента принимает объект типа "герой".
-# У героев есть метод увеличения собственного уровня.
+class Table():
+    def __init__(self, p, b):
+        self.a = [list([0 for j in range(b)]) for i in range(p)]
 
-# В основной ветке программы создается по одному герою для каждой команды. 
-# В цикле генерируются объекты-солдаты. 
-# Их принадлежность команде определяется случайно. 
-# Солдаты разных команд добавляются в разные списки.
+    def get_value(self, r, cl):
+        try:
+            return self.a[r][cl]
+        except:
+            return None
 
-# Измеряется длина списков солдат противоборствующих команд и выводится на экран. 
-# У героя, принадлежащего команде с более длинным списком, поднимается уровень.
+    def set_value(self, r, cl, val):
+        self.a[r][cl] = val
 
-# Отправьте одного из солдат первого героя следовать за ним. 
-# Выведите на экран идентификационные номера этих двух юнитов."
-import random
-import abc
-from abc import ABC, abstractmethod
+    def n_rows(self):
+        return len(self.a)
 
+    def n_cols(self):
+        if len(self.a) == 0:
+            return 0
+        else:
+            return len(self.a[0])
 
+    def delete_row(self, r):
+        self.a.pop(r)
 
-        
+    def delete_col(self, cl):
+        for i in self.a:
+            i.pop(cl)
 
+    def add_row(self, r):
+        self.a.insert(r, [0 for i in range(len(self.a[0]))])
 
-if __name__ == '__main__':
-    pass
+    def add_col(self, cl):
+        for i in self.a:
+            i.insert(cl, 0)

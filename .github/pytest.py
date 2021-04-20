@@ -1,9 +1,10 @@
-def masgen(n):
+def test(mstr):
+    for i in mstr:
+        if i.isdigit():
+            mlist.append(i)
+    print(*mlist)
 
-    mlist=list(map(int, input().split()[:n]))
-    print(max(enumerate(mlist), key=lambda x: abs(x[1]))[0])
 
 if __name__ == '__main__':
-    masgen(n=5)
-    
-    
+    mlist = []
+    test(mstr='Андрей Петров 14.06.1996 Москва')

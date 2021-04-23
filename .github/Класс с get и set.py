@@ -43,6 +43,8 @@ class Rectangle:
     def __printlog(self, message: str): print(message)
 
 
+
+
 r = Rectangle(0, 0, 200, 100)
 
 r.setX(1)

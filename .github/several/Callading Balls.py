@@ -9,7 +9,8 @@ BG_COLOR = 'white'
 MAIN_BALL_COLOR = 'blue'
 MAIN_BALL_RADIUS = 25
 BAD_COLOR = 'red'
-COLORS = ['aqua', 'fuchsia', BAD_COLOR, 'pink', 'yellow', BAD_COLOR, 'gold', 'chartreuse', BAD_COLOR]
+COLORS = ['aqua', 'fuchsia', BAD_COLOR, 'pink',
+          'yellow', BAD_COLOR, 'gold', 'chartreuse', BAD_COLOR]
 NUM_OF_BALLS = 9
 MAX_RADIUS = 35
 MIN_RADIUS = 15
@@ -17,6 +18,7 @@ DELAY = 8
 INIT_DX = 1
 INIT_DY = 1
 ZERO = 0
+main_ball = None
 
 
 # ball class
@@ -70,7 +72,8 @@ def mouse_click(event):
     global main_ball
     if event.num == 1:  # left mouse button
         if 'main_ball' not in globals():  # старт
-            main_ball = Ball(event.x, event.y, MAIN_BALL_RADIUS, MAIN_BALL_COLOR, INIT_DX, INIT_DY)
+            main_ball = Ball(event.x, event.y, MAIN_BALL_RADIUS,
+                             MAIN_BALL_COLOR, INIT_DX, INIT_DY)
             if main_ball.x > WIDTH / 2:
                 main_ball.dx = -main_ball.dx
             if main_ball.y > HEIGHT / 2:
@@ -81,7 +84,7 @@ def mouse_click(event):
                 main_ball.dy = -main_ball.dy
             else:
                 main_ball.dx = -main_ball.dx
-    elif event.num == 3:  # right mouse button: turn right
+    elif event.num == 3:
         if main_ball.dy * main_ball.dx > 0:
             main_ball.dx = -main_ball.dx
         else:
@@ -121,10 +124,12 @@ def main():
     if 'main_ball' in globals():
         main_ball.move()
         if len(balls) - num_of_bad_balls == 0:
-            canvas.create_text(WIDTH / 2, HEIGHT / 2, text="YOU WON!", font="Arial 20", fill="lime")
+            canvas.create_text(WIDTH / 2, HEIGHT / 2,
+                               text="YOU WON!", font="Arial 20", fill="lime")
             main_ball.dx = main_ball.dy = 0
         elif main_ball.dx * main_ball.dy == 0:
-            canvas.create_text(WIDTH / 2, HEIGHT / 2, text="YOU LOSE!", font="Arial 20", fill="red")
+            canvas.create_text(WIDTH / 2, HEIGHT / 2,
+                               text="YOU LOSE!", font="Arial 20", fill="red")
     root.after(DELAY, main)
 
 

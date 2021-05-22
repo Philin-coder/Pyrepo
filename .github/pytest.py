@@ -1,10 +1,28 @@
+import random
 
 
-a = int(input('первое число'))  # раз вводим число, жмем enter
-b = int(input('второе'))  # два вводим число, жмем enter
+def zapis(my_filename, fext2):
+    n = 8
+    mlist = list(random.randint(1, 100) for i in range(n))
 
-if a >= 0 and b >= 0:  # проверка
-    a, b = b, a
-    print('Переменные поменялись местами!', a, b)  # вывод рах
-else:
-    print('Введена не являющаяся числовым знач-ем переменная!')  # вывод два
+    with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
+        print(mlist, file=fp, sep="\n")
+        return mlist
+
+
+def reader(my_filename, fext2):
+    with open(my_filename + '.' + fext2, 'r', encoding='utf-8') as fp:
+        data = fp.readlines()
+    print(data)
+    s = 0
+    for i in data:
+        i=int(i)
+        s+=i
+    print(s)
+
+
+if __name__ == '__main__':
+    my_filename = None
+    fex2 = None
+    zapis(my_filename='test', fext2='txt')
+    reader(my_filename='test', fext2='txt')

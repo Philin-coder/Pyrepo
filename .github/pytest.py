@@ -1,6 +1,6 @@
-def findper(ct: float, kt: float) -> float:
-    return f'{ct*kt}'
+def findper(n: float) -> float:
+    return f'{n:.15f}'
 
 
 if __name__ == '__main__':
-    print(findper(ct=float(input()), kt=float(input())))
+    print(findper(n=float(input())))

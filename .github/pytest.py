@@ -1,6 +1,2 @@
-def findper(n: float) -> float:
-    return f'{n:.15f}'
-
-
-if __name__ == '__main__':
-    print(findper(n=float(input())))
+a = 4
+print(a, 'a')

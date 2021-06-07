@@ -9,6 +9,4 @@ def test(n: int) -> list:
  
  
 if __name__ == '__main__':
-    n = int(input())
- 
-    print(test(n))
+    print(test(n=int(input())))

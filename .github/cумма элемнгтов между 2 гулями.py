@@ -1,0 +1,7 @@
+lst = (1, 2, 0, 3, 4, 5, 0, 6)
+i = lst.index(0)
+print(i)
+i2 = lst.index(0, i + 1)
+print(i2)
+print(lst[i:i2])
+print(sum(lst[i:i2]))

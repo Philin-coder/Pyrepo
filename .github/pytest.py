@@ -1,13 +1,9 @@
+import csv
+from operator import itemgetter
 
+with open('studens.csv', encoding="utf-8", ) as file:
+    reader = csv.reader(file, delimiter=';')
+    students = list(reader)
+    del students[0]
 
-def masgen() -> list:
-    mlist = list(range(0, 49))
-    print(mlist)
-    for j, i in enumerate(mlist):
-        if i < 15:
-            mlist[j] = -1
-    print(mlist)
-
-
-if __name__ == '__main__':
-    print(masgen())
+print(sorted(students, key=itemgetter(1)))

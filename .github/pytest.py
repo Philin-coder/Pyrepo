@@ -1,11 +1,6 @@
-import numpy as np
-
-
-def masgen():
-    x = np.array([20, 31, 42, 52])
-    print(x)
-    
+def task(mystr: str) -> str:
+    return f'{"Потому, что главдиолусы"}'
 
 
 if __name__ == '__main__':
-    print(masgen())
+    print(task(mystr=input("Почему же автосервис?")))

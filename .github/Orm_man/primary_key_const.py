@@ -4,5 +4,5 @@ parent = Table('parent', metadata,
     Column('acc_no', Integer()),
     Column('acc_type', Integer(), nullable=False),
     Column('name', String(16), nullable=False),
-    PrimaryKeyConstraint('acc_no', name='acc_no_pk')
+    #PrimaryKeyConstraint('acc_no', name='acc_no_pk')
 )

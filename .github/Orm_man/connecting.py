@@ -10,7 +10,7 @@ engine = create_engine("mysql+mysqldb://root:pass@23.92.23.113/mydb")
 engine = create_engine("postgresql+psycopg2://root:pass@localhost/mydb")
 
 # Подключение к серверу Oracle на локальном хосте с помощью cx-Oracle DBAPI.
-engine = create_engine("oracle+cx_oracle://root:pass@localhost/mydb"))
+engine = create_engine("oracle+cx_oracle://root:pass@localhost/mydb")
 
 # Подключение к MSSQL серверу на localhost с помощью PyODBC DBAPI.
 engine=create_engine("oracle+pyodbc://root:pass@localhost/mydb")

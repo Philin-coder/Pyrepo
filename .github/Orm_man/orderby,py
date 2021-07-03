@@ -1,0 +1,7 @@
+s = select([items]).where(
+    items.c.quantity > 10
+).order_by(items.c.cost_price)
+
+print(s)
+print(conn.execute(s).fetchall())
+

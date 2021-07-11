@@ -1,0 +1,2 @@
+matrix_power = lambda matrix, power:(f:=lambda r, i:f((lambda a, b:[[sum(e1 * e2 for e1, e2 in zip(row, column)) for column in zip(*b)] for row in a])(r, matrix), i + 1) if i < power else r)((lambda n:[[int(i == j) for j in range(n)] for i in range(n)])(len(matrix)), 0)
+print(*matrix_power(matrix=[[-1,  2, -5],[ 3,  4,  1],[ 0,  1,  2]], power=2), sep='\n')

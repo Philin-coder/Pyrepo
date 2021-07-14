@@ -1,3 +1,13 @@
-from openpyxl import load_workbook
-w = load_workbook(filename='filename.xlsx', use_iterators=True)
-sh = w.get_sheet_by_name('название_страницы'.decode('utf8'))
+import downto
+def devider(a:int, b:int )->int:
+    """
+    Делит 
+    """
+
+    return a//b
+
+
+if __name__ == '__main__':
+    print(devider(a=int(input()),b=int(input())))
+    
+    

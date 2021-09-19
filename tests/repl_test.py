@@ -1,4 +1,4 @@
-from unittest import TestCase
+from unittest import TestCase, main
 from tested.replacer_package import replacer
 from tested.replacer_package.replacer import str_conv_func
 import doctest
@@ -23,4 +23,4 @@ class ReplaxerTest(TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    main()

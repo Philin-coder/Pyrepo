@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class LagrTest(TestCase):
+class LagrangeTest(TestCase):
     def test_normal_input(self):
         self.assertEqual(lagrange(28, 2, 4), '5 1 1 1')
 

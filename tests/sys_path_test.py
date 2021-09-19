@@ -1,4 +1,4 @@
-from unittest import TestCase
+from unittest import TestCase, main
 from tested.sis_path_pacage import system_path
 from tested.sis_path_pacage.system_path import find_path
 import doctest

@@ -11,8 +11,8 @@ def load_tests(loader, tests, ignore):
 
 class SysTest(TestCase):
     def testFilePath_works(self):
-        self.assertEqual(find_path(), 'F:\\code\\Result\\Python\\.github\\tamplate\\tested\\sis_path_pacage')
+        self.assertEqual(find_path(), 'F:\\code\\Result\\Python\\template\\tested\\sis_path_pacage')
 
 
 if __name__ == '__main__':
-    unittest.main()
+    main()

@@ -14,31 +14,31 @@ class SimpleClassTest(TestCase):
         self.em = Employee('John', 222, 222.2, 2)
 
     def test_name(self):
-        self.assertEqual((self.em.name), 'John', 'Значение не является строки john')
+        self.assertEqual(self.em.name, 'John', 'Значение не является строки john')
 
     def test_nom(self):
-        self.assertEqual((self.em.nom), 222, 'Значение не является числом  222')
+        self.assertEqual(self.em.nom, 222, 'Значение не является числом  222')
 
     def test_zp(self):
-        self.assertEqual((self.em.zp), 222.2, 'Значение не является числом  222.2')
+        self.assertEqual(self.em.zp, 222.2, 'Значение не является числом  222.2')
 
-    def test_uder(self):
-        self.assertEqual((self.em.u_der), 2, 'Значение не является числом  2')
+    def test_u_der(self):
+        self.assertEqual(self.em.u_der, 2, 'Значение не является числом  2')
 
-    def test_whфt_name(self):
+    def test_what_name(self):
         self.assertIsInstance(self.em.name, str, 'Значение не строка')
 
-    def test_whфt_nom(self):
+    def test_what_nom(self):
         self.assertIsInstance(self.em.nom, int, 'Значение не целое число')
 
-    def test_whфt_zp(self):
+    def test_what_zp(self):
         self.assertIsInstance(self.em.zp, float, 'Значение не вещественноее число')
 
-    def test_whфt_u_der(self):
+    def test_what_u_der(self):
         self.assertIsInstance(self.em.u_der, int, 'Значение не целое  число')
 
     def test_type_str(self):
-        self.assertIsInstance(self.em.printer().__str__(),str,'Значение является строкой ')
+        self.assertIsInstance(self.em.printer().__str__(), str, 'Значение является строкой ')
 
 
 if __name__ == '__main__':

@@ -15,13 +15,13 @@ class ClassTest(TestCase):
         self.mn = Manager('Ivan', 'Jons', 123, 'Alten')
 
     def test_naim(self):
-        self.assertEqual((self.em.naim), 'John', "Значение не является  строкой John")
+        self.assertEqual(self.em.naim, 'John', "Значение не является  строкой John")
 
     def test_surname(self):
-        self.assertEqual((self.em.surname), 'Smih', "Значение не является  строкой Smih")
+        self.assertEqual(self.em.surname, 'Smih', "Значение не является  строкой Smih")
 
     def test_pay(self):
-        self.assertEqual((self.em.pay), 123, "Значение не является целым строкой  123")
+        self.assertEqual(self.em.pay, 123, "Значение не является целым строкой  123")
 
     def test_what_is_naim(self):
         self.assertIsInstance(self.em.naim, str, "Значение не является строкой")
@@ -30,7 +30,7 @@ class ClassTest(TestCase):
         self.assertIsInstance(self.em.surname, str, "Значение не является  строкой")
 
     def test_what_is_pay(self):
-        self.assertIsInstance(self.em.pay, int , "Значение не является числом")
+        self.assertIsInstance(self.em.pay, int, "Значение не является числом")
 
     def test_type_tuple(self):
         self.assertIsInstance(self.em.__str__(), tuple, "Значение не является картежем")
@@ -42,16 +42,16 @@ class ClassTest(TestCase):
         self.assertTrue(isinstance(Manager('Ivan', 'Jons', 123, 'Alten'), Employee) == True, " Методы не наследуются")
 
     def test_naim_mn(self):
-        self.assertEqual((self.mn.naim), 'Ivan', "Значение не является  строкой Ivan")
+        self.assertEqual(self.mn.naim, 'Ivan', "Значение не является  строкой Ivan")
 
     def test_surname_mn(self):
-        self.assertEqual((self.mn.surname), 'Jons', "Значение не является  строкой Jons")
+        self.assertEqual(self.mn.surname, 'Jons', "Значение не является  строкой Jons")
 
     def test_pay_mn(self):
-        self.assertEqual((self.mn.pay), 123, "Значение не является  числом 123")
+        self.assertEqual(self.mn.pay, 123, "Значение не является  числом 123")
 
     def test_rank_mn(self):
-        self.assertEqual((self.mn.rank), 'Alten', "Значение не является  строкой  Alten")
+        self.assertEqual(self.mn.rank, 'Alten', "Значение не является  строкой  Alten")
 
     def test_what_is_naim_mn(self):
         self.assertIsInstance(self.mn.naim, str, "Значение не является  строкой")

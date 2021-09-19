@@ -1,3 +1,4 @@
+import numpy as np
 for i in range(n):
     p = np.poly1d(1)
     for j in range(n):

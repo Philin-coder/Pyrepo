@@ -1,4 +1,4 @@
-from unittest import TestCase
+from unittest import TestCase, main
 from tested.replacer_package import replacer
 from tested.replacer_package.replacer import str_conv_func
 import doctest
@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class ReplaxerTest(TestCase):
+class RepLaxerTest(TestCase):
     def test_repl_english(self):
         self.assertEqual(str_conv_func(input_string='google', repl_string='@'), '@2g 2o 1l 1e ')
 
@@ -23,4 +23,4 @@ class ReplaxerTest(TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    main()

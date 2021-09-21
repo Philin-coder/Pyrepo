@@ -1,4 +1,3 @@
-# TODO: and me
 def check(cards):
     d = {x: cards.count(x) for x in cards}.values()
     if len(d) == 1:
@@ -9,5 +8,5 @@ def check(cards):
         return 'Three of a Kind' if 3 in d else 'Two Pairs'
     elif len(d) == 4:
         return 'One Pair',
-    else:  # len(d) == 5
-        return 'Straight' if max(cards) == min(cards) + 4 else 'Nothing
+    else:
+        return 'Straight' if max(cards) == min(cards) + 4 else 'Nothing'

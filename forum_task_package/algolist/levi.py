@@ -7,7 +7,6 @@ def distance(a, b):
 
 n, m = len(a), len(b)
 if n > m:
-    # Make sure n <= m, to use O(min(n,m)) space
     a, b = b, a
     n, m = m, n
 

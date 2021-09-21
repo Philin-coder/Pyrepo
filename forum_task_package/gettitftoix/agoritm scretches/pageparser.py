@@ -3,9 +3,7 @@ import shutil  # no
 import bs4  # no
 import sys  # no
 from bs4 import BeautifulSoup  # no
-import os  # no
-import myconstants  # no
-from myconstants import  # no
+import os
 from urllib.request import urlopen  # no
 from smtplib import SMTP_SSL  #
 from email.mime.multipart import MIMEMultipart  #
@@ -14,48 +12,46 @@ from email import encoders  #
 import lxml.html  #
 import time  #
 
-
-def Mparser(URL, my_filename):
-    f = myhtml = urlopen(URL)
-    sp = BeautifulSoup(myhtml, "html.parser")
-    lnk = sp.findAll("a", class_="playlist-btn-down")
-    os.mkdir(fname)
-    os.chdir(os.getcwd() + '\\' + fname + '\\')
-    char = "'"
-    for l in lnk:
-        l = str(l)
-        l = l.replace('"', ' ')
-        l = l.replace('<a class=', ' ')
-        l = l.replace('playlist-btn-down no-ajaxy', '')
-        l = l.replace('\'', '')
-        l = l.replace('target= _blank  title= скачать >(скачать)</a>', ' ')
-        l = l.replace('download', 'listen')
-        l = l.replace('href=', ' ')
-        linklist.append(l)
-        print(linklist)
-    with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
-        print(*linklist, file=fp, sep="\n")
-        fp.close()
-    return linklist
-
-
-def reader(whattoread):
-    with open(whattoread + '.' + fext2, 'r', encoding='utf-8') as fp1:
-        playlist = []
-        str = ''
-        playlist = fp1.readlines()
-        fp1.close()
-        print('список песен')
-        for c in range(len(playlist)):
-            time.sleep(2)
-            str = str.replace(str, playlist[c])
-            print(str)
-
-
-if __name__ == '__main__':
-    fname = str(input("название папки" + ' '))
-    my_filename = str(input("введите имя файла" + ' '))
-    whattoread = my_filename
-    linklist = []
-    Mparser(URL, my_filename)
-    reader(whattoread)
+# def m_parser(url, my_filename):
+#     f = my_html = urlopen(url)
+#     sp = BeautifulSoup(my_html, "html.parser")
+#     lnk = sp.findAll("a", class_="playlist-btn-down")
+#     os.mkdir(f_name)
+#     os.chdir(os.getcwd() + '\\' + f_name + '\\')
+#     # char = "'"
+#     for lt in lnk:
+#         lt = str(lt)
+#         lt = lt.replace('"', ' ')
+#         lt = lt.replace('<a class=', ' ')
+#         lt = lt.replace('playlist-btn-down no-ajaxy', '')
+#         lt = lt.replace('\'', '')
+#         lt = lt.replace('target= _blank  title= скачать >(скачать)</a>', ' ')
+#         lt = lt.replace('download', 'listen')
+#         lt = lt.replace('href=', ' ')
+#         linklist.append(lt)
+#         print(linklist)
+#     with open(my_filename + '.' + fl_ext2, 'w', encoding='utf-8') as fp:
+#         print(*linklist, file=fp, sep="\n")
+#         fp.close()
+#     return linklist
+#
+#
+# def reader(what_to_read):
+#     with open(what_to_read + '.' + fext2, 'r', encoding='utf-8') as fp1:
+#         play_list = []
+#         f_str = ''
+#         play_list = fp1.readlines()
+#         print('список песен')
+#         for c in range(len(play_list)):
+#             time.sleep(2)
+#             f_str = f_str.replace(f_str, play_list[c])
+#             print(f_str)
+#
+#
+# if __name__ == '__main__':
+#     f_name = str(input("название папки" + ' '))
+#     my_filename = str(input("введите имя файла" + ' '))
+#     what_to_read = my_filename
+#     linklist = []
+#     m_parser(url, my_filename)
+#     reader(what_to_read)

@@ -27,10 +27,10 @@ for guessesTaken in range(6):
         print('Отлино, ' + mmyName + 'Ты справился за ' + guessesTaken + 'попытки!')
 
     if guess != number:
-        number = '<'
-        not supported
-        between
-        instances
-        of
-        'int' and 'str'(number)
+        # number = '<'
+        # not supported
+        # between
+        # instances
+        # of
+        # 'int' and 'str'(number)
         print('Увы. Я загадал число ' + number + '.')

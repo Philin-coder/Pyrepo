@@ -11,7 +11,7 @@ pygame.init()
 screen = pygame.display.set_mode([800, 600])
 
 # This sets the name of the window
-pygame.display.set_caption('CMSC 150 is cool')
+pygame.display.set_caption('CM_S_C 150 is cool')
 
 clock = pygame.time.Clock()
 
@@ -28,7 +28,8 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            click_sound.play()
+            pass
+            # click_sound.play()
 
     screen.blit(background_image, background_position)
 

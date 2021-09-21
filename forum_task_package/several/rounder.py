@@ -24,13 +24,14 @@ for guessesTaken in range(6):
 
     if guess == number:
         guessesTaken = str(guessesTaken + 1)
-        print('Отлино, ' + mmyName + 'Ты справился за ' + guessesTaken + 'попытки!')
+        print('Отлино, ' + myName + 'Ты справился за ' + guessesTaken + 'попытки!')
 
     if guess != number:
-        # number = '<'
-        # not supported
-        # between
-        # instances
-        # of
-        # 'int' and 'str'(number)
-        print('Увы. Я загадал число ' + number + '.')
+        pass
+# number = '<'
+# not supported
+# between
+# instances
+# of
+# 'int' and 'str'(number)
+# print('Увы. Я загадал число ' + number + '.')

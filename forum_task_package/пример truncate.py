@@ -1,3 +1,4 @@
+# todo: and me
 def zapis(my_filename, fext2):
     with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
         print('проба', file=fp, sep="\n")

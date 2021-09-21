@@ -1,3 +1,4 @@
+# TODO: and me
 import discord
 
 client = discord.Client()

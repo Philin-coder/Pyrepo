@@ -1,3 +1,4 @@
+# TODO: and me
 import requests
 import pygame
 import os
@@ -12,6 +13,7 @@ import sys
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import time
+
 
 # from smtplib import SMTP_SSL
 # from email.mime.multipart import MIMEMultipart
@@ -68,7 +70,7 @@ def myf(myhttp):
     ms = str(input("введите название сохраняемого трека" + ' '))
     req = requests.get(myhttp, stream=True)
     if req.status_code == status:
-        with  open(ms + '.' + fext, 'wb')as fp:
+        with  open(ms + '.' + fext, 'wb') as fp:
             fp.write(req.content)
     put = (os.getcwd())
     files = []

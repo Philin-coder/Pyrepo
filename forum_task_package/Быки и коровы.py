@@ -1,3 +1,4 @@
+# TODO: and me
 def number_check(usr_number):
     count_cows = 0
     count_bulls = 0

@@ -1,3 +1,4 @@
+# TODO: and me
 # игра по угадыванию числа
 import random
 

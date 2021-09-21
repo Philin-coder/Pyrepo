@@ -1,4 +1,3 @@
-#TODO: and me
 def foo(f, h, v):
     nn = range(len(f))
     if h - 2 in nn and v + 1 in nn:

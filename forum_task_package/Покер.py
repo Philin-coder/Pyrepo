@@ -1,3 +1,4 @@
+# TODO: and me
 def check(cards):
     d = {x: cards.count(x) for x in cards}.values()
     if len(d) == 1:

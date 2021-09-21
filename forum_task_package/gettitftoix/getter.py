@@ -23,23 +23,23 @@ import time
 # import sqlite3
 
 
-def Mparser(URL, my_filename):
-    f = myhtml = urlopen(URL)
-    sp = BeautifulSoup(myhtml, "html.parser")
+def m_parser(url, my_filename):
+    f = my_html = urlopen(url)
+    sp = BeautifulSoup(my_html, "html.parser")
     lnk = sp.findAll("a", class_="playlist-btn-down")
     os.mkdir(fname)
     os.chdir(os.getcwd() + '\\' + fname + '\\')
-    char = "'"
-    for l in lnk:
-        l = str(l)
-        l = l.replace('"', ' ')
-        l = l.replace('<a class=', ' ')
-        l = l.replace('playlist-btn-down no-ajaxy', '')
-        l = l.replace('\'', '')
-        l = l.replace('target= _blank  title= скачать >(скачать)</a>', ' ')
-        l = l.replace('download', 'listen')
-        l = l.replace('href=', ' ')
-        linklist.append(l)
+    # char = "'"
+    for ls in lnk:
+        ls = str(ls)
+        ls = ls.replace('"', ' ')
+        ls = ls.replace('<a class=', ' ')
+        ls = ls.replace('playlist-btn-down no-ajaxy', '')
+        ls = ls.replace('\'', '')
+        ls = ls.replace('target= _blank  title= скачать >(скачать)</a>', ' ')
+        ls = ls.replace('download', 'listen')
+        ls = ls.replace('href=', ' ')
+        linklist.append(ls)
         print(linklist)
     with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
         print(linklist, file=fp, sep="\n")
@@ -47,22 +47,22 @@ def Mparser(URL, my_filename):
     return linklist
 
 
-def reader(whattoread):
-    with open(whattoread + '.' + fext2, 'r', encoding='utf-8') as fp1:
+def reader(what_to_read):
+    with open(what_to_read + '.' + f_ext2, 'r', encoding='utf-8') as fp1:
         playlist = []
         str = ''
-        playlist = fp1.readlines()
+        play_list = fp1.readlines()
         fp1.close()
         print('список песен')
         for c in range(len(playlist)):
             time.sleep(2)
-            str = str.replace(str, playlist[c])
-            print(str)
+            m_str = str.replace(str, playlist[c])
+            print(m_str)
 
 
-def folderer(nput, nname):
-    os.mkdir(nname)
-    os.chdir(os.getcwd() + '\\' + nname + '\\')
+def folderer(n_put, n_name):
+    os.mkdir(n_name)
+    os.chdir(os.getcwd() + '\\' + n_name + '\\')
     print(os.getcwd())
 
 
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     nname = str(input("названеи папки" + ' '))
     nput = os.getcwd()
     s = int(input("сколько раз вывести"))
-    Mparser(URL, my_filename)
+    m_parser(URL, my_filename)
     reader(whattoread)
     folderer(nput, nname)
     for i in range(s):

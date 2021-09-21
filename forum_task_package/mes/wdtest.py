@@ -6,7 +6,6 @@ from selenium import webdriver
 drv = webdriver.Chrome()
 drv.get('https://web.whatsapp.com/')
 while True:
-
-aim = glob.glob('*.exe')
+    aim = glob.glob('*.exe')
+    path = os.getcwd() + '\\' + 'chromedriver.exe'
 # print(aim)
-path = os.getcwd() + '\\' + 'chromedriver.exe'

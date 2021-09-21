@@ -20,5 +20,5 @@ def click(self, on_element=None):
         self.w3c_actions.key_action.pause()
     else:
         self._actions.append(lambda: self._driver.execute(
-            Command.CLICK, {'button': 0}))
+            self.command.click, {'button': 0}))
     return self

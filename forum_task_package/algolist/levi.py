@@ -15,3 +15,4 @@ def distance(a, b):
             current_row[j] = min(add, delete, change)
 
     return current_row[n]
+# test it

@@ -1,2 +1,5 @@
-with open(my_filename + '.' + fext2, 'w', encoding='utf-8') as fp:
-    print(linklist, file=fp, sep="\n")
+my_filename = 'test'
+f_ext2 = 'txt'
+link_lis = []
+with open(my_filename + '.' + f_ext2, 'w', encoding='utf-8') as fp:
+    print(link_lis, file=fp, sep="\n")

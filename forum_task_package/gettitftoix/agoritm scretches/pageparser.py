@@ -5,7 +5,7 @@
 # from bs4 import BeautifulSoup  # no
 # import os
 # from urllib.request import urlopen  # no
-# from smtplib import SMTP_SSL  #
+
 # from email.mime.multipart import MIMEMultipart  #
 # from email.mime.base import MIMEBase  #
 # from email import encoders  #
@@ -17,13 +17,13 @@
 #     sp = BeautifulSoup(my_html, "html.parser")
 #     lnk = sp.findAll("a", class_="playlist-btn-down")
 #     os.mkdir(f_name)
-#     os.chdir(os.getcwd() + '\\' + f_name + '\\')
+#     os.chdir(os.get_cwd() + '\\' + f_name + '\\')
 #     # char = "'"
 #     for lt in lnk:
 #         lt = str(lt)
 #         lt = lt.replace('"', ' ')
 #         lt = lt.replace('<a class=', ' ')
-#         lt = lt.replace('playlist-btn-down no-ajaxy', '')
+#         lt = lt.replace('playlist-btn-down no-a_j_a_xy', '')
 #         lt = lt.replace('\'', '')
 #         lt = lt.replace('target= _blank  title= скачать >(скачать)</a>', ' ')
 #         lt = lt.replace('download', 'listen')
@@ -37,10 +37,10 @@
 #
 #
 # def reader(what_to_read):
-#     with open(what_to_read + '.' + fext2, 'r', encoding='utf-8') as fp1:
+#     with open(what_to_read + '.' + f_ext2, 'r', encoding='utf-8') as fp1:
 #         play_list = []
 #         f_str = ''
-#         play_list = fp1.readlines()
+#         play_list = fp1.readline()
 #         print('список песен')
 #         for c in range(len(play_list)):
 #             time.sleep(2)

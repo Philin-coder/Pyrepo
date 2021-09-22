@@ -1,6 +1,6 @@
 from unittest import TestCase, main
-from euclidus_dist_paxkage import euclidus_distance
-from euclidus_dist_paxkage.euclidus_distance import euclidean_distance_func
+from tested.euclidus_dist_paxkage import euclidus_distance
+from tested.euclidus_dist_paxkage.euclidus_distance import euclidean_distance_func
 import doctest
 
 

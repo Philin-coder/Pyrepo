@@ -1,16 +1,16 @@
 # TODO: and me
-import shutil  # no
-import bs4  # no
-import sys  # no
-from bs4 import BeautifulSoup  # no
-import os
-from urllib.request import urlopen  # no
-from smtplib import SMTP_SSL  #
-from email.mime.multipart import MIMEMultipart  #
-from email.mime.base import MIMEBase  #
-from email import encoders  #
-import lxml.html  #
-import time  #
+# import shutil  # no
+# import bs4  # no
+# import sys  # no
+# from bs4 import BeautifulSoup  # no
+# import os
+# from urllib.request import urlopen  # no
+# from smtplib import SMTP_SSL  #
+# from email.mime.multipart import MIMEMultipart  #
+# from email.mime.base import MIMEBase  #
+# from email import encoders  #
+# import lxml.html  #
+# import time  #
 
 # def m_parser(url, my_filename):
 #     f = my_html = urlopen(url)

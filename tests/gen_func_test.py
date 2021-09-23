@@ -1,8 +1,6 @@
 from unittest import TestCase, main
 from tested.fib_package import gen_function_example
 from tested.fib_package.gen_function_example import gen_start
-from tested.fib_package.gen_function_example import fibonacci
-
 import doctest
 
 

@@ -16,7 +16,7 @@ class BefireMaxSORTestCase(TestCase):
     def test_wrong_input(self):
         with self.assertRaises(TypeError) as e:
             max_sort_gen_func(ints=['a', 3, 4, 1, 10, 12])
-        self.assertEqual('Введите список  чисел',e.exception.args[0])
+        self.assertEqual('Введите список  чисел', e.exception.args[0])
 
 
 if __name__ == '__main__':

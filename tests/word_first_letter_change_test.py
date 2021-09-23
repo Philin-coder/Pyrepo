@@ -1,6 +1,6 @@
 from unittest import TestCase, main
-from  tested.m_word_first_letter_change_package import changer
-from  tested.m_word_first_letter_change_package.changer import changer_word_first_letters_func
+from tested.m_word_first_letter_change_package import changer
+from tested.m_word_first_letter_change_package.changer import changer_word_first_letters_func
 import doctest
 
 
@@ -19,7 +19,7 @@ class WordFirstLetterChangeTest(TestCase):
     def test_change_nothing(self):
         with self.assertRaises(TypeError) as e:
             changer_word_first_letters_func(text_str='')
-        self.assertEqual('Введите  непустую  строку',e.exception.args[0])
+        self.assertEqual('Введите  непустую  строку', e.exception.args[0])
 
     def test_change_digit(self):
         with self.assertRaises(TypeError) as e:

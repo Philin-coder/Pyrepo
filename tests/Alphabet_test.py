@@ -10,22 +10,20 @@ def load_tests(loader, tests, ignore):
 
 
 class AlphabetTest(TestCase):
-    def test_aski_wromg(self):
+    def test_ascii_wrong(self):
         with self.assertRaises(TypeError) as e:
             alphabetic_func(text_str=' ')
         self.assertEqual('Введена не буква', e.exception.args[0])
 
-    def test_aski_ints(self):
+    def test_ascii_ints(self):
         with self.assertRaises(TypeError) as e:
             alphabetic_func(text_str=1)
         self.assertEqual('Введена не буква', e.exception.args[0])
 
-    def test_aski_space(self):
+    def test_ascii_space(self):
         with self.assertRaises(TypeError) as e:
             alphabetic_func(text_str='')
         self.assertEqual('Введена не буква', e.exception.args[0])
-
-
 
 
 if __name__ == '__main__':

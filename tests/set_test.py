@@ -1,7 +1,7 @@
 from unittest import TestCase, main
 from tested.set_package import set_checker
-from set_package.set_checker import set_enq_func
-from set_package.set_checker import subset_test_func
+from tested.set_package.set_checker import set_enq_func
+from tested.set_package.set_checker import subset_test_func
 import doctest
 
 

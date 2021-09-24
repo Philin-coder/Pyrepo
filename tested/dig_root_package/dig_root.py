@@ -14,7 +14,7 @@ def dig_root_func(n: int) -> int:
     7
 
     """
-    if isinstance(n, int) and not isinstance(n, float):
+    if isinstance(n, int) and not isinstance(n, float) and n >= 0:
         fend = False
         s = 0
         while not fend:

@@ -24,6 +24,11 @@ class DigRootTest(TestCase):
             dig_root_func(n='1123')
         self.assertEqual('Введите число', e.exception.args[0])
 
+    def test_ints_negg(self):
+        with self.assertRaises(TypeError) as e:
+            dig_root_func(n=-10)
+        self.assertEqual('Введите число', e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()

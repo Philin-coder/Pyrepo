@@ -16,7 +16,7 @@ class HalfTest(TestCase):
     def test_wrong_input(self):
         with self.assertRaises(TypeError) as e:
             half_list_gen_func(n='10')
-        self.assertEqual('Введите целое число', e.exception.args[0])
+        self.assertEqual('can only concatenate str (not "int") to str', e.exception.args[0])
 
 
 if __name__ == '__main__':

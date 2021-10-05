@@ -16,4 +16,4 @@ def half_list_gen_func(n: int) -> [list, tuple]:
         except TypeError:
             raise TypeError('передан неверный тип даны]')
     else:
-        raise TypeError('an only concatenate str (not "int") to str')
+        raise TypeError('can only concatenate str (not "int") to str')

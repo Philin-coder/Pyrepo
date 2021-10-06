@@ -17,10 +17,10 @@ class InaudibleTestCase(TestCase):
                      'небольшой тренировки - и вы сможете это делать.'),
             'двтльнй фкт н ткст н зк НРЗБРЧВ кзвтс двльн прст чтть Дсттчн нбльшй трнрвк в смжт т длть')
 
-    # def test_int_in_input(self):
-    #     with self.assertRaises(TypeError) as e:
-    #         inaudible(text=1)
-    #     self.assertEqual('Введена не строка', e.exception.args[0])
+    def test_int_in_input(self):
+        with self.assertRaises(TypeError) as e:
+            inaudible(text=1)
+        self.assertEqual('Введена не строка', e.exception.args[0])
 
 
 if __name__ == '__main__':

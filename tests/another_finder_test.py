@@ -22,6 +22,5 @@ class AnotherFinderTest(TestCase):
         self.assertEqual('Вводите строку', e.exception.args[0])
 
 
-
 if __name__ == '__main__':
     main()

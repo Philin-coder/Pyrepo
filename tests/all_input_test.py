@@ -16,8 +16,8 @@ class All_inputTest(TestCase):
 
     def test_wrong_input(self):
         with self.assertRaises(ValueError) as e:
-            changer(text_str=14, text_substr=234,repl_str=1)
-        self.assertEqual('Проверьте, возможно, введена не строка ',e.exception.args[0])
+            changer(text_str=14, text_substr=234, repl_str=1)
+        self.assertEqual('Проверьте, возможно, введена не строка ', e.exception.args[0])
 
     def test_empty_input(self):
         with self.assertRaises(ValueError) as e:
@@ -28,6 +28,7 @@ class All_inputTest(TestCase):
         with self.assertRaises(ValueError) as e:
             changer(text_str=[123], text_substr=[123], repl_str=[123])
         self.assertEqual('Проверьте, возможно, введена не строка ', e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()

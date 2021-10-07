@@ -27,5 +27,6 @@ class CoordTest(TestCase):
             coord_quoters(x='11.0', y=-5.0)
         self.assertEqual('Введите 2 вещественных числа', e.exception.args[0])
 
+
 if __name__ == '__main__':
     main()

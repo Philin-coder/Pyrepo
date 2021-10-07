@@ -23,5 +23,6 @@ class CleanFuncTest(TestCase):
             func(12, '12')
             self.assertEqual('проверьте входные данные', e.exception.args[0])
 
+
 if __name__ == '__main__':
     main()

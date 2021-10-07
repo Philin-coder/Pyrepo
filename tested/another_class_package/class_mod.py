@@ -14,6 +14,4 @@ class Employee(object):
         self.u_der = u_der
 
     def printer(self):
-        return f'Employee:{self.name}', f'nom:{self.nom}', f'pay{self.zp}',f'{self.u_der}'
-
-
+        return f'Employee:{self.name}', f'nom:{self.nom}', f'pay{self.zp}', f'{self.u_der}'

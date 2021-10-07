@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.cezar_package import cezar_crypt
-from  tested.cezar_package.cezar_crypt import cezar_crypto
+from tested.cezar_package.cezar_crypt import cezar_crypto
 import doctest
 
 

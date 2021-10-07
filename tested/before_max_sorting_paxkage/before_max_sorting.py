@@ -8,9 +8,7 @@ def max_sort_gen_func(ints: list) -> list:
 
     """
 
-    if isinstance(ints, list) and  all(isinstance(i,int) for i in ints):
+    if isinstance(ints, list) and all(isinstance(i, int) for i in ints):
         return sorted(ints[:ints.index(max(ints))]) + ints[ints.index(max(ints)):]
     else:
         raise TypeError('Введите список  чисел')
-
-

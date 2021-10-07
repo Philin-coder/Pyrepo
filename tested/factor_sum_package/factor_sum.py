@@ -42,8 +42,3 @@ def factor_sum_func(n: int) -> [int, tuple]:
         return 'Sum: ', s
     else:
         raise TypeError('Введите целое число')
-
-
-if __name__ == '__main__':
-    print(factor_sum_func(n=10))
-    # print(factor_sum_func(n='10'))

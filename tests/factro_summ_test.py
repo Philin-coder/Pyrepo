@@ -1,6 +1,6 @@
 from unittest import TestCase, main
-from factor_sum_package import factor_sum
-from factor_sum_package.factor_sum import factor_sum_func
+from tested.factor_sum_package import factor_sum
+from tested.factor_sum_package.factor_sum import factor_sum_func
 import doctest
 
 

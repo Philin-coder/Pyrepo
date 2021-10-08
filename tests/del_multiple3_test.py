@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class DelMulest(TestCase):
+class DelMulTest(TestCase):
     def test_del_index_even(self):
         self.assertEqual(del_index(input_text_string='горе'), 'ор')
 

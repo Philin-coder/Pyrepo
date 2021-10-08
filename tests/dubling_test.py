@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class DublingTest(TestCase):
+class DoublingTest(TestCase):
     def test_dash_in_string(self):
         self.assertEqual(repeat_func(n=3, text_str='s-s'), 's, s, s, s')
 
@@ -19,7 +19,7 @@ class DublingTest(TestCase):
     def test_string_without_dash(self):
         self.assertEqual(repeat_func(n=3, text_str='мир'), 'мир')
 
-    def test_length_of_iput(self):
+    def test_length_of_input(self):
         with self.assertRaises(ValueError) as e:
             repeat_func(n=4, text_str='мир')
         self.assertEqual('строка должна быть нужной длинны', e.exception.args[0])

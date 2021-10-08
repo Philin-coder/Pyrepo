@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class DcitTestCase(TestCase):
+class DictTest(TestCase):
     def test_is_dict(self):
         self.assertEqual(dict_gen(list_key=["frog", "snail", "bird"], list_value=[1, 2, 3]),
                          {'frog': 1, 'snail': 2, 'bird': 3})

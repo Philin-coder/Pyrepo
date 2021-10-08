@@ -10,24 +10,24 @@ def load_tests(loader, tests, ignore):
 
 
 class DeleterTest(TestCase):
-    def test_deleteer_works(self):
+    def test_deleter_works(self):
         self.assertEqual(before_colons_del('проба: первая'), 'проба')
 
-    def test_deleteer_works_no_colons(self):
+    def test_deleter_works_no_colons(self):
         self.assertEqual(before_colons_del('проба вторая'), 'проба втора')
 
-    def test_deleteer_works_english(self):
+    def test_deleter_works_english(self):
         self.assertEqual(before_colons_del(text_str='colons: двоеточие'), 'colons')
 
-    def test_deleteer_works_english(self):
+    def test_deleter_works_english(self):
         self.assertEqual(before_colons_del(text_str=''), '')
 
-    def test_deleteer_ints(self):
+    def test_deleter_ints(self):
         with self.assertRaises(TypeError) as e:
             before_colons_del(text_str=1)
         self.assertEqual('введите строку', e.exception.args[0])
 
-    def test_deleteer_float(self):
+    def test_deleter_float(self):
         with self.assertRaises(TypeError) as e:
             before_colons_del(text_str=1.0)
         self.assertEqual('введите строку', e.exception.args[0])

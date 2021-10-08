@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class CyrcleAndPOintTest(TestCase):
+class CyrAndPointTest(TestCase):
     def test_it_works_yes(self):
         self.assertEqual(func(x=1.0, y=1.0, xc=1.0, yc=1.0, r=1.0), 'yes')
 

@@ -10,7 +10,7 @@ def load_tests(loader, tests, ignore):
 
 
 class DigitInStringSummerTest(TestCase):
-    def test_simple_summ(self):
+    def test_simple_sum(self):
         self.assertEqual(digit_summer_func(text_str='лес 123 поле 356'), 20)
 
     def test_no_digit(self):
@@ -19,7 +19,7 @@ class DigitInStringSummerTest(TestCase):
     def test_no_letters(self):
         self.assertEqual(digit_summer_func(text_str='123'), 6)
 
-    def test_epty_string(self):
+    def test_empty_string(self):
         with self.assertRaises(TypeError) as e:
             digit_summer_func(text_str='')
         self.assertEqual('Введите непустую строку, содержащую цифры', e.exception.args[0])

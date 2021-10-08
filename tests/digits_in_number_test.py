@@ -18,7 +18,7 @@ class DigitsInNumberTest(TestCase):
             self.assertEqual(digits_in_number(n='12'))
         self.assertEqual('Должно быть введено целое число', e.exception.args[0])
 
-    def test_Noth_in_input(self):
+    def test_nothing_in_input(self):
         with self.assertRaises(TypeError) as e:
             self.assertEqual(digits_in_number(n=' '))
         self.assertEqual('Должно быть введено целое число', e.exception.args[0])

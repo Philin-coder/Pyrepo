@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class L_compTest(TestCase):
+class LCompTest(TestCase):
     def test_int_in_input(self):
         self.assertEqual(list_func(n=1024), 52020)
 

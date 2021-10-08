@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class randomizerTest(TestCase):
+class RandomizerTest(TestCase):
     def test_int_in_input(self):
         self.assertEqual(range_filter(n=12), [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
 

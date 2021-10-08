@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.odd_even_package import odd_even
-from  tested.odd_even_package.odd_even import count_even_odd_func
+from tested.odd_even_package.odd_even import count_even_odd_func
 import doctest
 
 

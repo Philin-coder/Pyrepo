@@ -16,7 +16,7 @@ class LatterTest(TestCase):
     def test_most_common_letter_works_rus(self):
         with self.assertRaises(TypeError) as e:
             most_common_english_letter(text_str='проба')
-        self.assertEqual('Введите строку на английском ',e.exception.args[0])
+        self.assertEqual('Введите строку на английском ', e.exception.args[0])
 
     def test_most_common_letter_works_digits(self):
         with self.assertRaises(TypeError) as e:

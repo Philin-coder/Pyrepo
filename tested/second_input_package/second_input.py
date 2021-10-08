@@ -24,7 +24,5 @@ def second_input_finder_func(text_str: str, t_ch: str) -> int:
         except(ValueError, TypeError, IndexError):
             raise IndexError('проверьте ввод, возможно, слово содержит символ всего 1 раз')
 
-
-
     else:
         raise TypeError('Введите  непустую символьную строку и искомый символ, не равный пробелу (не цифру)')

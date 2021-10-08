@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.uniq_in_list_pacage import uniq_in_list
-from  tested.uniq_in_list_pacage.uniq_in_list import set_gen
+from tested.uniq_in_list_pacage.uniq_in_list import set_gen
 import doctest
 
 

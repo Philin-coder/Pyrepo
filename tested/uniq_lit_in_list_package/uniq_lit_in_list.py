@@ -10,7 +10,7 @@ def collect_unique(text_str: str) -> list:
     проба1 проба2 проба3
     ['проба1', 'проба2', 'проба3']
     """
-    if len(text_str) != 0 and isinstance(text_str,str):
+    if len(text_str) != 0 and isinstance(text_str, str):
         try:
             print(text_str)
             words = list()
@@ -23,5 +23,3 @@ def collect_unique(text_str: str) -> list:
             raise ValueError('введите строку')
     else:
         raise ValueError('введите строку')
-
-

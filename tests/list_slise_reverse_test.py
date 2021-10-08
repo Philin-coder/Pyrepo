@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class list_slise_reverseTest(TestCase):
+class ListSlicerReverseTest(TestCase):
     def test_ints_in_input(self):
         self.assertEqual(int_list_gen(n=12), [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
 

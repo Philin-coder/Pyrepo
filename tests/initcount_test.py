@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.simple_count_package import initcount
-from  tested.simple_count_package.initcount import simple_expr
+from tested.simple_count_package.initcount import simple_expr
 import doctest
 
 

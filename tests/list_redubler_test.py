@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.list_double_killer_package import list_redubler
-from  tested.list_double_killer_package.list_redubler import deleter
+from tested.list_double_killer_package.list_redubler import deleter
 import doctest
 
 

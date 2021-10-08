@@ -1,7 +1,8 @@
 from unittest import TestCase, main
 from tested.graphic_pacage import graphick
 from tested.graphic_pacage.graphick import graph
-import  doctest
+import doctest
+
 
 def load_tests(loader, tests, ignore):
     tests.addTests(doctest.DocTestSuite(graphick))

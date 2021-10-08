@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class lamtests(TestCase):
+class LamTests(TestCase):
     def test_lam_right(self):
         self.assertEqual(func(1, 4), 17)
 

@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.two_grade_package import two_grade
-from  tested.two_grade_package.two_grade import check2rec
+from tested.two_grade_package.two_grade import check2rec
 import doctest
 
 

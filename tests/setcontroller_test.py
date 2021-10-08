@@ -3,7 +3,6 @@ from tested.setcontroller_package import setcontrolle
 from tested.setcontroller_package.setcontrolle import nabor
 
 
-
 class SetControllerTest(TestCase):
 
     def test_char_in_input(self):

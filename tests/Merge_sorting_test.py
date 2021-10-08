@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.merge_sorting_package import merge_sort
-from  tested.merge_sorting_package.merge_sort import merge_sort_func
+from tested.merge_sorting_package.merge_sort import merge_sort_func
 import doctest
 
 

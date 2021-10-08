@@ -15,7 +15,6 @@ class PInTest(TestCase):
         with self.subTest(is_valid_pin(pin='7-101-4')):
             self.assertEqual(is_valid_pin(pin='7-101-4'), True)
 
-
     def test_validator_false(self):
         with self.subTest(is_valid_pin(pin='12-22-16')):
             self.assertEqual(is_valid_pin(pin='12-22-16'), False)

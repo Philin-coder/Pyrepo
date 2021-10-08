@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class oneSTRTestCase(TestCase):
+class OneSTRTest(TestCase):
     def test_one_str_TRue(self):
         self.assertEqual(func(5), True)
 

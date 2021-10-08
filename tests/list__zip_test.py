@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class listZipTest(TestCase):
+class ListZipTest(TestCase):
     def test_dict_works(self):
         self.assertEqual(dict_func(), 'Лена живет в  городе Обнинск')
 

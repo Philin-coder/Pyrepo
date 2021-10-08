@@ -1,6 +1,6 @@
 from unittest import TestCase, main
-from  tested.second_input_package import second_input
-from  tested.second_input_package.second_input import second_input_finder_func
+from tested.second_input_package import second_input
+from tested.second_input_package.second_input import second_input_finder_func
 import doctest
 
 
@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class S_input_TesTest(TestCase):
+class SInputTest(TestCase):
     def test_it_works_english(self):
         self.assertEqual(second_input_finder_func(text_str='sims', t_ch='s'), 3)
 

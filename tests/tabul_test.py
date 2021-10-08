@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.tabul_package import tabul
-from  tested.tabul_package.tabul import tab_func
+from tested.tabul_package.tabul import tab_func
 import doctest
 
 
@@ -21,6 +21,7 @@ class TabulTest(TestCase):
         with self.assertRaises(TypeError) as e:
             tab_func(dx='25')
         self.assertEqual('Введено не   число', e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()

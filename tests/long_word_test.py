@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class longWordTestCase(TestCase):
+class LongWordTest(TestCase):
     def test_long_word(self):
         self.assertEqual(long_word(text_str='Проба третья'), (6, 'третья'))
 

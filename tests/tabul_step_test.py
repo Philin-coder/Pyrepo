@@ -26,7 +26,7 @@ class TabulStepTest(TestCase):
     def test_normal_input_dx_char(self):
         with self.assertRaises(TypeError) as e:
             tab_func(dx='100', x=-12)
-        self.assertEqual('Введите число',e.exception.args[0])
+        self.assertEqual('Введите число', e.exception.args[0])
 
     def test_normal_input_x_char(self):
         with self.assertRaises(TypeError) as e:

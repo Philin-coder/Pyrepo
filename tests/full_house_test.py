@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.full_house_package import full_house
-from  tested.full_house_package.full_house import full_house_func
+from tested.full_house_package.full_house import full_house_func
 import doctest
 
 

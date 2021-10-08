@@ -3,8 +3,6 @@ import pygame
 import os
 import sys
 
-
-
 import myconstants
 from myconstants import *
 from pygame.locals import *
@@ -16,7 +14,7 @@ import time
 from smtplib import SMTP_SSL
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
-from email import  encoders
+from email import encoders
 import lxml.html
 from PyQt4 import QtCore, QtGui
 
@@ -28,11 +26,14 @@ except AttributeError:
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -83,15 +84,16 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
-    linklist=[]
-    playlist=[]
+
+    linklist = []
+    playlist = []
     app = QtGui.QApplication(sys.argv)
 
     MainWindow = QtGui.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     QtCore.QObject.connect(ui.parsbutton, QtCore.SIGNAL("clicked()"), lambda: Mparser(ui))
-    QtCore.QObject.connect(ui.closer,QtCore.SIGNAL("clicked()"),lambda: reader(ui))
+    QtCore.QObject.connect(ui.closer, QtCore.SIGNAL("clicked()"), lambda: reader(ui))
 
 
     def Mparser(ui):
@@ -121,15 +123,10 @@ if __name__ == "__main__":
             msg.exec_()
             return linklist
 
+
     def reader(ui):
-        msg1=QtGui.QFileDialog
-
-
-
-
-
+        msg1 = QtGui.QFileDialog
 
 
     MainWindow.show()
     sys.exit(app.exec_())
-

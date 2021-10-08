@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.max_end_ind_package import max_end_ind
-from  tested.max_end_ind_package.max_end_ind import max_and_ind_func
+from tested.max_end_ind_package.max_end_ind import max_and_ind_func
 import doctest
 
 
@@ -19,7 +19,7 @@ class MaxEndIdnTest(TestCase):
     def test_char_in_input(self):
         with self.assertRaises(ValueError) as e:
             max_and_ind_func(n=12, cycle_step='1')
-        self.assertEqual('Введите 2 целых числа граница диапазона и шаг',e.exception.args[0])
+        self.assertEqual('Введите 2 целых числа граница диапазона и шаг', e.exception.args[0])
 
 
 if __name__ == '__main__':

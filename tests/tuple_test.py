@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class TuppleTest(TestCase):
+class TupleTest(TestCase):
     def test_type_demo_working(self):
         self.assertEqual(immut(), '<class \'tuple\'>')
 

@@ -1,5 +1,4 @@
 from unittest import TestCase, main
-from tested.setcontroller_package import setcontrolle
 from tested.setcontroller_package.setcontrolle import nabor
 
 

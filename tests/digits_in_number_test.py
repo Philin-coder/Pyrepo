@@ -1,7 +1,7 @@
 from unittest import TestCase, main
 from tested.digits_in_number_package import digit_counter
 from tested.digits_in_number_package.digit_counter import digits_in_number
-import  doctest
+import doctest
 
 
 def load_tests(loader, tests, ignore):
@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class digits_in_numberTest(TestCase):
+class DigitsInNumberTest(TestCase):
     def test_digit_in_input(self):
         self.assertEqual(digits_in_number(n=12), 2)
 

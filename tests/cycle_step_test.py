@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.cycle_with_step_package import cycle_steper
-from tested.cycle_with_step_package.cycle_steper    import cycle_step
+from tested.cycle_with_step_package.cycle_steper import cycle_step
 import doctest
 
 

@@ -14,7 +14,7 @@ class DigitInStringSummerTest(TestCase):
         self.assertEqual(digit_summer_func(text_str='лес 123 поле 356'), 20)
 
     def test_no_digit(self):
-        self.assertEqual(digit_summer_func(text_str='лес, дол,   поле '),0)
+        self.assertEqual(digit_summer_func(text_str='лес, дол,   поле '), 0)
 
     def test_no_letters(self):
         self.assertEqual(digit_summer_func(text_str='123'), 6)
@@ -22,12 +22,13 @@ class DigitInStringSummerTest(TestCase):
     def test_epty_string(self):
         with self.assertRaises(TypeError) as e:
             digit_summer_func(text_str='')
-        self.assertEqual('Введите непустую строку, содержащую цифры',e.exception.args[0])
+        self.assertEqual('Введите непустую строку, содержащую цифры', e.exception.args[0])
 
     def test_digits_only(self):
         with self.assertRaises(TypeError) as e:
             digit_summer_func(text_str=123)
         self.assertEqual('Введите непустую строку, содержащую цифры', e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()

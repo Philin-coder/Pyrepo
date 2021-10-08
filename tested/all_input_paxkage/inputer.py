@@ -13,8 +13,8 @@ def changer(text_str: str, text_substr: str, repl_str: str) -> str:
     """
     if isinstance(text_str, str) and not any(i.isdigit() for i in text_str) and not any(
             i.isdigit() for i in text_substr) and isinstance(text_substr, str) and isinstance(repl_str,
-                                                                                              str) and not any(
-        i.isdigit() for i in repl_str) and len(text_str) > 0 and len(text_substr) > 0 and len(repl_str) > 0:
+                                                                                              str) and \
+            not any(i.isdigit() for i in repl_str) and len(text_str) > 0 and len(text_substr) > 0 and len(repl_str) > 0:
         try:
             return text_str.replace(text_substr, repl_str)
         except (TypeError, ValueError):

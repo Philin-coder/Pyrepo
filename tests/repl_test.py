@@ -14,7 +14,7 @@ class RepLaxerTest(TestCase):
         self.assertEqual(str_conv_func(input_string='google', repl_string='@'), '@2g 2o 1l 1e ')
 
     def test_english_another_repl(self):
-        self.assertEqual(str_conv_func(input_string='People', repl_string='#'), '#2e 1P 1p 1l ')
+        self.assertEqual(str_conv_func(input_string='Peple', repl_string='#'), '#2e 1P 1p 1l ')
 
     def test_wrong_input(self):
         with self.assertRaises(TypeError) as e:

@@ -35,4 +35,5 @@ while len(words) > 0:
         else:
             k += 1
 
-    if len(w) > 1: print(*w)
+    if len(w) > 1:
+        print(*w)

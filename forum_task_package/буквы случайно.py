@@ -6,7 +6,7 @@ def alpha(n):
         print(chr(i))
         mlist.append(chr(i))
     print(mlist)
-    mlist1 = [ chr(random.randint(97, 123)) for i in range(n)]
+    mlist1 = [chr(random.randint(97, 123)) for i in range(n)]
     return mlist1
 
 

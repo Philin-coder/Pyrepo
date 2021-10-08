@@ -15,10 +15,10 @@ class ReducerTest(TestCase):
         self.assertEqual(red_func(), [4, 3, 2, 1])
 
     def test_reducer_list_in(self):
-        self.assertTrue(isinstance([i for i in range(1, 11)], list) == True, "не  список ")
+        self.assertTrue(isinstance([i for i in range(1, 11)], list) is True, "не  список ")
 
     def test_reducer_list_out(self):
-        self.assertTrue(isinstance(reduce(lambda res, i: [i] + res, [1, 2, 3, 4], []), list) == True, "не  список")
+        self.assertTrue(isinstance(reduce(lambda res, i: [i] + res, [1, 2, 3, 4], []), list) is True, "не  список")
 
 
 if __name__ == '__main__':

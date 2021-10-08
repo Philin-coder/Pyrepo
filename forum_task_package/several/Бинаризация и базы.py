@@ -5,7 +5,7 @@ import binascii
 
 
 def reader(fname, nm):
-    with open(fname, 'rb')as fp:
+    with open(fname, 'rb') as fp:
         content = fp.read()
         # print(binascii.hexlify(content))
         fhex = (binascii.hexlify(content))
@@ -22,7 +22,7 @@ def reader(fname, nm):
         results = cur.fetchall()
         print(results)
         conn.commit()
-        with open(nm + '.' + 'sql', 'w')as fp:
+        with open(nm + '.' + 'sql', 'w') as fp:
             for line in conn.iterdump():
                 fp.write("%s\n" % line)
 

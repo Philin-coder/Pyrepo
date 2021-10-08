@@ -22,10 +22,10 @@ class UniqTest(TestCase):
         self.assertEqual('введите строку', e.exception.args[0])
 
     def test_uniq_in_list_is_str_in(self):
-        self.assertTrue(isinstance('проба1 проба2 проба3', str) == True, "Не строка")
+        self.assertTrue(isinstance('проба1 проба2 проба3', str) is True, "Не строка")
 
     def test_uniq_in_list_is_list_out(self):
-        self.assertTrue(isinstance(['проба', 'проба2'], list) == True, "Не лист")
+        self.assertTrue(isinstance(['проба', 'проба2'], list) is True, "Не лист")
 
 
 if __name__ == '__main__':

@@ -128,14 +128,14 @@ if __name__ == '__main__':
 
         if sys.argv[1] == "start":
 
-            if os.path.isfile(pidFile) == False:
+            if os.path.isfile(pidFile) is False:
                 start(pidFile, pidName)
             else:
                 print("process is already started")
 
         elif sys.argv[1] == "stop":
 
-            if os.path.isfile(pidFile) == True:
+            if os.path.isfile(pidFile) is True:
                 stop(pidFile, pidName)
             else:
                 print("process is already stopped")

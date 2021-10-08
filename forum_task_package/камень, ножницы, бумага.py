@@ -25,7 +25,7 @@ while True:
 
         continue
 
-    rr = random.randrange(1, 3);
+    rr = random.randrange(1, 3)
 
     if res == rr:
 

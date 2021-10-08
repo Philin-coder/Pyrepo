@@ -1,4 +1,5 @@
 from itertools import permutations
+
 als = 'abcdefghijklmnopqrstuvwxyz'.upper()
 st = input()
 P = st.split(' ')

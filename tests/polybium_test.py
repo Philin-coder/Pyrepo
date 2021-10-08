@@ -23,7 +23,7 @@ class PolyTest(TestCase):
         self.assertEqual(pol_decrypt(crypt=pol_crypt(text='hello world')), 'helloworld')
 
     def test_decrypt_wrong_table(self):
-        self.assertFalse((isinstance({'one', 'two', 'three'}, dict)) != False, 'Передан не словарь ')
+        self.assertFalse((isinstance({'one', 'two', 'three'}, dict)) is not False, 'Передан не словарь ')
 
 
 if __name__ == '__main__':

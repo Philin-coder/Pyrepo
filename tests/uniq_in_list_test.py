@@ -11,7 +11,7 @@ def load_tests(loader, tests, ignore):
 
 class UniqInListTest(TestCase):
     def test_is_list(self):
-        self.assertTrue(isinstance(list(set((1, 2, 2, 3, 4, 5))), list) == True, "не  список")
+        self.assertTrue(isinstance(list(set((1, 2, 2, 3, 4, 5))), list) is True, "не  список")
 
     def test_is_uniq(self):
         self.assertFalse(list((1, 2, 2, 3, 4, 5)) == list(set((1, 2, 3, 4, 5))), "списки равы")

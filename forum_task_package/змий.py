@@ -61,7 +61,7 @@ def gameLoop():
 
     while not game_over:
 
-        while game_close == True:
+        while game_close is True:
             dis.fill(blue)
             message("Вы проиграли! Нажмите Space что бы начать сначало", red)
             Your_score(Length_of_snake - 1)

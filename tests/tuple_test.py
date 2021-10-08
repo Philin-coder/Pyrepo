@@ -14,7 +14,7 @@ class TupleTest(TestCase):
         self.assertEqual(immut(), '<class \'tuple\'>')
 
     def test_error(self):
-        self.assertTrue((type((1, 1)).__name__ == 'tuple') == True, "не картежем")
+        self.assertTrue((type((1, 1)).__name__ == 'tuple') is True, "не картежем")
 
 
 if __name__ == '__main__':

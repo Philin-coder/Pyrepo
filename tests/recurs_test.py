@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 from tested.Recursion_package import recusion_example
-from  tested.Recursion_package.recusion_example import factorial_iterative_func
+from tested.Recursion_package.recusion_example import factorial_iterative_func
 import doctest
 
 
@@ -19,7 +19,7 @@ class RecursionTest(TestCase):
     def test_char(self):
         with self.assertRaises(TypeError) as e:
             factorial_iterative_func(num='')
-        self.assertEqual('Введите число',e.exception.args[0])
+        self.assertEqual('Введите число', e.exception.args[0])
 
 
 if __name__ == '__main__':

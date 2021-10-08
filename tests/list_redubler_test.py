@@ -14,11 +14,11 @@ class ReDoublerTest(TestCase):
         self.assertEqual(deleter(), [50, '0032', 765])
 
     def test_doubler_is_list_in(self):
-        self.assertTrue(isinstance([50, '0032', 17, 25, 765, 217, 25, 217, 17], list) == True, "не список")
+        self.assertTrue(isinstance([50, '0032', 17, 25, 765, 217, 25, 217, 17], list) is True, "не список")
 
     def test_doubler_is_list_out(self):
         self.assertTrue(isinstance([i for i in [50, '0032', 17, 25, 765, 217, 25, 217, 17] if
-                                    [50, '0032', 17, 25, 765, 217, 25, 217, 17].count(i) == 1], list) == True,
+                                    [50, '0032', 17, 25, 765, 217, 25, 217, 17].count(i) == 1], list) is True,
                         "не список")
 
 

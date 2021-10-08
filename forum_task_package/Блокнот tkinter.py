@@ -224,7 +224,7 @@ class Notepad:
 
     def __saveFile(self):
 
-        if self.__file == None:
+        if self.__file is None:
 
             # Сохранить как новый файл
 
@@ -253,10 +253,6 @@ class Notepad:
                 # Изменить заголовок окна
 
                 self.__root.title(os.path.basename(self.__file) + " - Notepad")
-
-
-
-
 
         else:
 

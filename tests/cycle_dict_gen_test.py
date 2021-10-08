@@ -17,11 +17,11 @@ class DictTestTest(TestCase):
         self.assertIsInstance({k: i + 1 for i, k in enumerate(['раз', 'два', 'три'])}, dict, 'передан не словарь')
 
     def test_is_dict_true(self):
-        self.assertTrue((isinstance({k: i + 1 for i, k in enumerate(['раз', 'два', 'три'])}, dict)) == True,
+        self.assertTrue((isinstance({k: i + 1 for i, k in enumerate(['раз', 'два', 'три'])}, dict)) is True,
                         'передан не словарь')
 
     def test_is_dict_false(self):
-        self.assertFalse(isinstance({k: i + 1 for i, k in enumerate(['раз', 'два', 'три'])}, set) == True,
+        self.assertFalse(isinstance({k: i + 1 for i, k in enumerate(['раз', 'два', 'три'])}, set) is True,
                          'передан не словарь')
 
 

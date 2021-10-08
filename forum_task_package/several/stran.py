@@ -19,7 +19,7 @@ def getTitle(url):
 
 
 title = getTitle("http://fishki.net/1319528-evrejskie-anekdoty.html")
-if title == None:
+if title is None:
     print("title not found")
 else:
     print(title)

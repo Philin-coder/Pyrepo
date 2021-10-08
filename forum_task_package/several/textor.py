@@ -3,6 +3,6 @@ f.write('yes')
 f.close()
 f = open('tekstovi.txt')
 end = f.read()
-while end != None:
+while end is not None:
     f.read()
     print(f)

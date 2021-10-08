@@ -21,7 +21,8 @@ else:
         result_test -= 1
         ostatok_test += step_min
 
-        if result_test == -1: break
+        if result_test == -1:
+            break
 
         if ostatok_test % step_max < ostatok:
             result = result_test + ostatok_test // step_max

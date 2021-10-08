@@ -180,7 +180,8 @@ def saveRec():
         else:
             existRec = False
             for field in fieldnamesRec:
-                if entriesRec[field + str(i)].get(): existRec = True  # Если существует запись в поле на этой строке
+                if entriesRec[field + str(i)].get():
+                    existRec = True  # Если существует запись в поле на этой строке
             if existRec:
                 if entriesRec['char' + str(i)].get():
                     char = entriesRec['char' + str(i)].get()

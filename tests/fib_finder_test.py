@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class FibFinderTestCase(TestCase):
+class FibFinderTest(TestCase):
     def test_works_int_input(self):
         self.assertEqual(fib_fnd_func(n=12, x=1), 'число 1 содержится в списке')
 

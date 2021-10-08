@@ -24,7 +24,7 @@ class DcitTestCase(TestCase):
     def test_is_dict_wrong_input(self):
         with self.assertRaises(TypeError) as e:
             dict_gen(list_key=["Капитан", "Майор", "Полковтк"], list_value={5, 6, 9})
-            self.assertEqual('e',e.exception.args[0])
+            self.assertEqual('e', e.exception.args[0])
 
         if __name__ == '__main__':
             main()

@@ -9,8 +9,8 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class All_inputTest(TestCase):
-    def test_it_workd(self):
+class AllInputTest(TestCase):
+    def test_it_world(self):
         self.assertEqual(changer(text_str='Самая длинная река это Волга', text_substr='Волга',
                                  repl_str='Нил'), 'Самая длинная река это Нил')
 

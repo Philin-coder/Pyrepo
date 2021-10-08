@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class num_dev_tests(TestCase):
+class NumDevtest(TestCase):
     def test_ints_in_input(self):
         self.assertEqual(num_devs(12), 6)
 

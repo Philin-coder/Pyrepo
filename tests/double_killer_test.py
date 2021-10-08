@@ -9,14 +9,14 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class double_killerTest(TestCase):
-    def test_doublekiller_works(self):
+class DoubleKillerTest(TestCase):
+    def test_double_killer_works(self):
         self.assertEqual(double_finder(repeated_sym=[1, 1, 2, 3, 3, 3, 4, 6]), [1, 3])
 
-    def test_doublekiller_works_sym(self):
+    def test_double_killer_works_sym(self):
         self.assertEqual(double_finder(repeated_sym=['1', '1', '2']), ['1'])
 
-    def test_doublekiller_works_empty(self):
+    def test_double_killer_works_empty(self):
         self.assertEqual(double_finder(repeated_sym=[]), [])
 
     def test_not_list(self):

@@ -36,10 +36,10 @@ class ClassTest(TestCase):
         self.assertIsInstance(self.em.__str__(), tuple, "Значение не является картежем")
 
     def test_ineerity(self):
-        self.assertTrue(issubclass(Manager, Employee) == True, "не наследуются")
+        self.assertTrue(issubclass(Manager, Employee) is True, "не наследуются")
 
     def test_ineerity_methods(self):
-        self.assertTrue(isinstance(Manager('Ivan', 'Jons', 123, 'Alten'), Employee) == True, " Методы не наследуются")
+        self.assertTrue(isinstance(Manager('Ivan', 'Jons', 123, 'Alten'), Employee) is True, " Методы не наследуются")
 
     def test_naim_mn(self):
         self.assertEqual(self.mn.naim, 'Ivan', "Значение не является  строкой Ivan")

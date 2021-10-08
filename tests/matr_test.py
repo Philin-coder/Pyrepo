@@ -9,8 +9,8 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MatrTestCase(TestCase):
-    def test_morezero(self):
+class MatrixTest(TestCase):
+    def test_more_zero(self):
         self.assertEqual(matrix_gen(a=2, b=2), [0, 1])
 
     def test_symbols(self):

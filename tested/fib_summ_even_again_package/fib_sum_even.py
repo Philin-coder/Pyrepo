@@ -1,16 +1,16 @@
-def fib_summ_even_func(previous: int, next_: int) -> int:
+def fib_sum_even_func(previous: int, next_: int) -> int:
     """
     Сумма четных числе Фибаначчи на интервале до 4000000
     :param previous: гачало вычислений
     :param next_: шаг цикла
     :return: сумма четных на интервале
-    >>> fib_summ_even_func(previous=0, next_=1)
+    >>> fib_sum_even_func(previous=0,next_=1)
     4613732
-    >>> fib_summ_even_func(previous=1, next_=5)
+    >>> fib_sum_even_func(previous=1,next_=5)
     16019504
-    >>> fib_summ_even_func(previous=8, next_=10)
+    >>> fib_sum_even_func(previous=8,next_=10)
     4749426
-    >>> fib_summ_even_func(previous=0, next_=10)
+    >>> fib_sum_even_func(previous=0,next_=10)
     5142270
 
     """

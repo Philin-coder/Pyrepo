@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class ArabitToRomanTest(TestCase):
+class ArabicToRomanTest(TestCase):
     def test_arabic_to_roman_even_ints_two_signs(self):
         self.assertEqual(arabic_to_roman_func(n=12), 'XII')
 

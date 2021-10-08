@@ -13,7 +13,7 @@ class HappyTickerTest(TestCase):
     def test_string_in_input_happy(self):
         self.assertEqual(happy_ticket_func(text_str='123321'), 'Счастливый')
 
-    def test_string_in_input_uisally(self):
+    def test_string_in_input_usually(self):
         self.assertEqual(happy_ticket_func(text_str='114111'), 'Обычный')
 
     def test_string_in_input_empty_str(self):

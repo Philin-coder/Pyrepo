@@ -9,14 +9,14 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MultTest(TestCase):
-    def test_mult_3(self):
+class MulTest(TestCase):
+    def test_mul_three(self):
         self.assertEqual(mul_sum(x=12, a=12), 'Кратно 3')
 
-    def test_mult_a(self):
+    def test_mul_a(self):
         self.assertEqual(mul_sum(x=62, a=2), 'Кратно a')
 
-    def test_not_mult_any(self):
+    def test_not_mul_any(self):
         self.assertEqual(mul_sum(x=16, a=3), 'число не кратно не 3  не а ')
 
     def test_not_one_sign(self):

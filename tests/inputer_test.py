@@ -15,7 +15,7 @@ class InputTest(TestCase):
 
     def test_is_int_in_list(self):
         with self.assertRaises(TypeError) as e:
-            inp_list(['rtgh', 'False', 'gbn'])
+            inp_list(['right', 'False', 'gbn'])
         self.assertEqual('В списке должны быть целые числа, он не должен быть пуст', e.exception.args[0])
 
 

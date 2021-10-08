@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class OneToSixtisevenTest(TestCase):
+class OneToSixtySevenTest(TestCase):
     def test_ints_in_input(self):
         self.assertEqual(random_func(p=12, q=2), [2, 14, 26, 38, 50, 62])
 

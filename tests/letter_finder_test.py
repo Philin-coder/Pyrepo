@@ -13,7 +13,7 @@ class LetterFinderTest(TestCase):
     def test_all_letters(self):
         self.assertEqual(finder(text_str='мир'), True)
 
-    def test_all_lett_av(self):
+    def test_all_letters_av(self):
         self.assertEqual(finder(text_str='рим'), True)
 
     def test_one_letter(self):
@@ -25,7 +25,7 @@ class LetterFinderTest(TestCase):
     def test_empty_str(self):
         with self.assertRaises(ValueError) as e:
             finder(text_str='')
-        self.assertEqual('Cтрока пуста', e.exception.args[0])
+        self.assertEqual('Строка пуста', e.exception.args[0])
 
     def test_int_in_str(self):
         with self.assertRaises(TypeError) as e:

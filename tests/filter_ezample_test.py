@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class FilterEzampleTest(TestCase):
+class FilterExampleTest(TestCase):
     def test_works(self):
         self.assertEqual(filter_func(n=12), [6, 7, 8, 9, 10, 11, 12])
 

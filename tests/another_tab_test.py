@@ -10,13 +10,13 @@ def load_tests(loader, tests, ignore):
 
 
 class TabTest(TestCase):
-    def test_tabul_neg(self):
+    def test_tab_neg(self):
         self.assertEqual(tab_func(x=-1), [3.0])
 
-    def test_tabul_int(self):
+    def test_tab_int(self):
         self.assertEqual(tab_func(x=10), [3.0, 7.0, 19.0, 39.0, 67.0, 103.0, 147.0])
 
-    def test_tabul_char(self):
+    def test_tab_char(self):
         with self.assertRaises(TypeError) as e:
             tab_func(x='1')
         self.assertEqual('Введите число', e.exception.args[0])

@@ -34,7 +34,4 @@ def finder(text_str: str) -> bool:
         except ValueError:
             raise ValueError('введите  строку ')
     else:
-        raise ValueError('Cтрока пуста')
-
-
-
+        raise ValueError('Строка пуста')

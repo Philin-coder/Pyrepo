@@ -11,7 +11,7 @@ def str_conv_func(input_string: str, repl_string: str) -> str:
     '@2g 2o 1l 1e '
     >>> str_conv_func(input_string='Проба', repl_string='@')
     '@1П 1р 1о 1б 1а '
-    >>> str_conv_func(input_string='Peple', repl_string='#')
+    >>> str_conv_func(input_string='People', repl_string='#')
     '#2e 1P 1p 1l '
 
     """

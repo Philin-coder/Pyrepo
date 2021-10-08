@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class CuclDictTest(TestCase):
+class CalcDictTest(TestCase):
     def test_add_ints_in_input(self):
         self.assertEqual(dict_count_func(x=2, y=5, key_to_find='add'), 7)
 
@@ -29,7 +29,7 @@ class CuclDictTest(TestCase):
 
     def test_wrong_operation_code(self):
         with self.assertRaises(ValueError) as e:
-            dict_count_func(x=2, y=0, key_to_find='divv')
+            dict_count_func(x=2, y=0, key_to_find='div_v')
         self.assertEqual('неверно введен код операции', e.exception.args[0])
 
     def test_chars_in_input(self):

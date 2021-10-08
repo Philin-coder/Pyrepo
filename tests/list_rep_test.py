@@ -14,7 +14,7 @@ class LIstRepTest(TestCase):
         self.assertEqual(list_rep_counter_func(wordlist=['Bob', 'Alice', 'Jane', 'Bob', 'Alice']),
                          {'Bob': 2, 'Alice': 2})
 
-    def test_emty_list(self):
+    def test_empty_list(self):
         with self.assertRaises(TypeError) as e:
             list_rep_counter_func(wordlist=[])
         self.assertEqual('передан неверный тип данных', e.exception.args[0])

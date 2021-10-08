@@ -9,14 +9,14 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class FibSummTest(TestCase):
+class FibSumTest(TestCase):
     def test_fib_works(self):
         self.assertEqual(fib_summ_even_func(previous=0, next_=1), 4613732)
 
-    def test_worksg_odd(self):
+    def test_works_odd(self):
         self.assertEqual(fib_summ_even_func(previous=1, next_=5), 16019504)
 
-    def test_worksg_even(self):
+    def test_works_even(self):
         self.assertEqual(fib_summ_even_func(previous=8, next_=10), 4749426)
 
     def test_zeros_both(self):

@@ -19,7 +19,7 @@ class FormatExampleTest(TestCase):
             format_example_func(start_int='4')
         self.assertEqual('Введите  целое число а не str', e.exception.args[0])
 
-    def test_format_example_floa_in_input(self):
+    def test_format_example_float_in_input(self):
         with self.assertRaises(TypeError) as e:
             format_example_func(start_int=4.1)
         self.assertEqual('Введите  целое число а не float', e.exception.args[0])

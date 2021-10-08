@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class SummMinTest(TestCase):
+class SumMinTest(TestCase):
     def test_min_works(self):
         self.assertEqual(find_sum_min_str_func(arr=[
             [1, 2, 3, 4, 5, 6, 7, 8, 10],

@@ -4,4 +4,4 @@ def chet(a, b):
 
 
 if __name__ == '__main__':
-    chet(a=int(input()), b=int(input()))
+    print(chet(a=int(input()), b=int(input())))

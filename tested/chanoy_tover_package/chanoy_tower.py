@@ -39,9 +39,7 @@ def move(n: int, start: int, finish: int) -> tuple:
             temp = (6 - start) - finish
             move(n - 1, start, temp)
             print("Перенести диск", n, "со стержня", start, "на стержень", finish)
-            res = (n - 1, temp, finish)
-
-            return res
+            return n - 1, temp, finish
 
     else:
         raise TypeError('введите целые, положительные  числа')

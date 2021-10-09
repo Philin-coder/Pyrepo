@@ -17,7 +17,3 @@ def pif_table_func() -> str:
     for line in nums:
         p_tab += line
     return p_tab
-
-
-if __name__ == '__main__':
-    print(pif_table_func())

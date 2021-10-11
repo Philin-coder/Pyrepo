@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class graphickTest(TestCase):
+class GraphTest(TestCase):
     def test_int_in_input(self):
         self.assertEqual(graph(x=0, y=-2), -2.0)
 

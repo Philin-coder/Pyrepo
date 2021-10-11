@@ -1,3 +1,4 @@
+# TODO: one
 def func():
     a = int(input("первое число"))
     b = int(input("второе число"))

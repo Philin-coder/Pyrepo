@@ -1,4 +1,3 @@
-# TODO: and me
 from PIL import Image, ImageFont, ImageDraw, ImageEnhance
 
 source_img = Image.open('file_name').convert("RGBA")

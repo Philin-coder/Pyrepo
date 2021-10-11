@@ -1,4 +1,3 @@
-# todo: and me
 def f_zap(my_filename, f_ext2):
     with open(my_filename + '.' + f_ext2, 'w', encoding='utf-8') as fp:
         print('проба', file=fp, sep="\n")

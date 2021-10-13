@@ -1,3 +1,4 @@
+# TODO and me
 def task(a, b, c):
     k = 4 - len(set([a, b, c]))
     if k == 1:

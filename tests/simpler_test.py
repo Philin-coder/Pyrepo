@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from tested.simpler_package import simpler  # fix
+from simpler_package import simpler  # fix
 from tested.simpler_package.simpler import is_prime
 from tested.simpler_package.simpler import list_gen
 import doctest

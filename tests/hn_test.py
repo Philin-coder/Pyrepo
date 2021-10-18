@@ -11,7 +11,7 @@ def load_tests(loader, tests, ignore):
 
 class HmTest(TestCase):
     def test_works(self):
-        self.assertEqual(word_counter(w_let='проверка', rep_pvt=5), ('итого', 32768))
+        self.assertEqual(word_counter(w_let='мир', rep_pvt=2), ('итого', 9))
 
     def test_wrong_input_w_let(self):
         with self.assertRaises(TypeError) as e:

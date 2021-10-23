@@ -2,7 +2,7 @@ import random
 
 
 def masgen(n):
-    mlist = [random.uniform(1, 10) for i in range(n)]
+    mlist = [random.uniform(1, 10) for _ in range(n)]
     for i in mlist:
         mlist1.append(i - (sum(mlist) / len(mlist)))
     print(mlist1)

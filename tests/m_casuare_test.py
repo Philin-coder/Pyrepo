@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MyClasTest(TestCase):
+class MyClosTest(TestCase):
     def setUp(self):
         self.ml = multiplier(n=2)
         multiplier(n=5)

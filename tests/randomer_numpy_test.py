@@ -11,7 +11,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MyNPTest(TestCase):
+class NPRNDTest(TestCase):
     def test_is_nd_array_list(self):
         self.assertIsInstance(np.array([random.random() for _ in range(4)]), np.ndarray)
 

@@ -12,8 +12,3 @@ def np_mass_create(n: int, m: int) -> numpy.ndarray:
         return numpy.random.randint(100, size=(n, m)) * 0.1
     else:
         raise TypeError('Введите целые числа')
-
-
-if __name__ == '__main__':
-    print(np_mass_create(n=2, m=2))
-    # print(np_mass_create(n='2', m='2'))

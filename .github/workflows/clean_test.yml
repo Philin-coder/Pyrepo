@@ -23,7 +23,8 @@ jobs:
       - name: Install dependencies
 
         run: |
-          pip install roman,numpy
+          pip install roman
+          pip install numpy 
           python -m pip install --upgrade pip
 
           pip install flake8 pytest

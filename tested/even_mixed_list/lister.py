@@ -13,7 +13,7 @@ def even_finder(mixed_vals: list) -> list:
     """
     if isinstance(mixed_vals, list) and len(mixed_vals) > 0:
         fnd = str(mixed_vals).removesuffix(']').removeprefix('[')
-        if any(i.isdigit() for i in mixed_vals):
+        if any(isinstance(i, int) for i in mixed_vals):
             num_lst = list(map(int, re.findall(r'\d+', fnd)))
             return [i for i in num_lst if i % 2 == 0]
     else:

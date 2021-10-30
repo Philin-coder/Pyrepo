@@ -10,11 +10,13 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class NumpySummerTest(TestCase):
-    def test_is_nd_array_list(self):
+class NumpySummerTestCase(TestCase):
+    def test_is_matrix(self):
+        self.assertIsInstance(mas_summer(a=np.ndarray([1, 2, 3]), b=np.ndarray([1, 2, 3])), np.ndarray)
+
+    def test_wrong_input(self):
         with self.assertRaises(TypeError) as e:
-            mas_summer(a=np.ndarray([[11, 22], [33, 44]]), b=np.ndarray([[55, 66], [77, 88]]))
-        self.assertEqual('\'list\' object cannot be interpreted as an integer', e.exception.args[0])
+            mas_summer(a=np.ndarray([1, 2, 3]), b=np.ndarray([1, 2, 3]))
 
 
 if __name__ == '__main__':

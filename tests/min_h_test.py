@@ -13,6 +13,9 @@ class MinHourTest(TestCase):
     def test_ints_in_input(self):
         self.assertEqual(how_many_hour_and_minutes(n=148), (2, 28))
 
+    def test_ints_in_input_less_twenty_four(self):
+        self.assertEqual(how_many_hour_and_minutes(n=14), (0, 14))
+
     def test_wrong_input(self):
         with self.assertRaises(TypeError) as e:
             how_many_hour_and_minutes(n='148')

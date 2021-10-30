@@ -10,7 +10,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class NumpySummerTestCase(TestCase):
+class NumpySummerTest(TestCase):
     def test_is_nd_array_list(self):
         with self.assertRaises(TypeError) as e:
             mas_summer(a=np.ndarray([[11, 22], [33, 44]]), b=np.ndarray([[55, 66], [77, 88]]))

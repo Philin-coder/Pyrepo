@@ -14,10 +14,6 @@ class NumpySummerTestCase(TestCase):
     def test_is_matrix(self):
         self.assertIsInstance(mas_summer(a=np.ndarray([1, 2, 3]), b=np.ndarray([1, 2, 3])), np.ndarray)
 
-    def test_wrong_input(self):
-        with self.assertRaises(TypeError) as e:
-            mas_summer(a=np.ndarray([1, 2, 3]), b=np.ndarray([1, 2, 3]))
-
 
 if __name__ == '__main__':
     main()

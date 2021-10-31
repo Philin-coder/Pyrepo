@@ -15,7 +15,7 @@ def create_matrix(n: int) -> list:
 
 def show_matrix(matrix: list):
     """
-    Вывод списка случайных чисел в виде матрицы
+    Вывод списка случайных чисел в виде матрицы.
     :param matrix:
     :return: Матрица случайных чисел.
     """

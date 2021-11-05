@@ -14,5 +14,3 @@ def dict_gen(list_key: list, list_value: list) -> dict:
         return dict(zip(list_key, list_value))
     else:
         raise TypeError('полцчены не списки ')
-
-

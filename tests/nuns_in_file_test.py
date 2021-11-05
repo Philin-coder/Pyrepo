@@ -10,7 +10,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class Test(TestCase):
+class NiFTest(TestCase):
     def test_right_input_gen_cont(self):
         self.assertEqual(cont_gen(text_str='1s2t3o4p'), [1, 2, 3, 4])
 

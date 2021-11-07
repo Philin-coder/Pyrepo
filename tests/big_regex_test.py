@@ -27,54 +27,54 @@ class BigRegexTest(TestCase):
         self.assertEqual('Передан неверный тип данных', e.exception.args[0])
 
     def test_write_to_file_right(self):
-        self.assertEqual(write_to_file(file_name='test', f_ext='txt',
+        self.assertEqual(write_to_file(file_name='r_test', f_ext='txt',
                                        fdata=cont_gen(file_cont='AV is largest Analytics community of India')),
                          'file_created')
 
     def test_write_to_file_wrong(self):
         with self.assertRaises(ValueError) as e:
-            write_to_file(file_name='test', f_ext='tt',
+            write_to_file(file_name='r_test', f_ext='tt',
                           fdata=cont_gen(file_cont='AV is largest Analytics community of India'))
         self.assertEqual('Файл имеет неправильный тип ', e.exception.args[0])
 
     def test_one_sym_right(self):
-        self.assertEqual(one_sym(my_filename='test', f_ext='txt'),
+        self.assertEqual(one_sym(my_filename='r_test', f_ext='txt'),
                          ['[', "'", 'A', 'V', ' ', 'i', 's', ' ', 'l', 'a', 'r', 'g', 'e', 's', 't', ' ', 'A', 'n', 'a',
                           'l', 'y', 't', 'i', 'c', 's', ' ', 'c', 'o', 'm', 'm', 'u', 'n', 'i', 't', 'y', ' ', 'o', 'f',
                           ' ', 'I', 'n', 'd', 'i', 'a', '\\', 'n', "'", ']'])
 
     def test_one_sym_wrong(self):
         with self.assertRaises(FileNotFoundError) as e:
-            one_sym(my_filename='test', f_ext='tt')
+            one_sym(my_filename='r_test', f_ext='tt')
         self.assertEqual('Файл имеет неверный тип ', e.exception.args[0])
 
     def test_one_letter_right(self):
-        self.assertEqual(one_letter(my_filename='test', f_ext='txt'),
+        self.assertEqual(one_letter(my_filename='r_test', f_ext='txt'),
                          ['A', 'V', 'i', 's', 'l', 'a', 'r', 'g', 'e', 's', 't', 'A', 'n', 'a', 'l', 'y', 't', 'i', 'c',
                           's', 'c', 'o', 'm', 'm', 'u', 'n', 'i', 't', 'y', 'o', 'f', 'I', 'n', 'd', 'i', 'a', 'n'])
 
     def test_one_letter_wrong(self):
         with self.assertRaises(FileNotFoundError) as e:
-            one_letter(my_filename='test', f_ext='tt')
+            one_letter(my_filename='r_test', f_ext='tt')
         self.assertEqual('Файл имеет неверный тип ', e.exception.args[0])
 
     def test_letters_with_spaces_right(self):
-        self.assertEqual(letters_with_spaces(my_filename='test', f_ext='txt'),
+        self.assertEqual(letters_with_spaces(my_filename='r_test', f_ext='txt'),
                          ['', '', 'AV', '', 'is', '', 'largest', '', 'Analytics', '', 'community', '', 'of', '',
                           'India', '', 'n', '', '', ''])
 
     def test_letters_with_spaces_wrong(self):
         with self.assertRaises(FileNotFoundError) as e:
-            letters_with_spaces(my_filename='test', f_ext='tt')
+            letters_with_spaces(my_filename='r_test', f_ext='tt')
         self.assertEqual('Файл имеет неверный тип ', e.exception.args[0])
 
     def test_letters_only_right(self):
-        self.assertEqual(letters_only(my_filename='test', f_ext='txt'),
+        self.assertEqual(letters_only(my_filename='r_test', f_ext='txt'),
                          ['AV', 'is', 'largest', 'Analytics', 'community', 'of', 'India', 'n'])
 
     def test_letters_only_wrong(self):
         with self.assertRaises(FileNotFoundError) as e:
-            letters_only(my_filename='test', f_ext='tt')
+            letters_only(my_filename='r_test', f_ext='tt')
         self.assertEqual('Файл имеет неверный тип ', e.exception.args[0])
 
 

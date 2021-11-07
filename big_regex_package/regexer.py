@@ -23,7 +23,7 @@ def write_to_file(file_name: str, f_ext: str, fdata: str) -> str:
     :param f_ext: Расширение.
     :param fdata: Данные, котоая будут записаны в файл.
     :return: Код состояния(успешна ли запись).
-    >>> write_to_file(file_name='test', f_ext='txt',
+    >>> write_to_file(file_name='r_test', f_ext='txt',
     ...                         fdata=cont_gen(file_cont='AV is largest Analytics community of India'))
     'file_created'
     """
@@ -218,17 +218,38 @@ def html_cleaner(text_str: str) -> list:
 
 
 if __name__ == '__main__':
+    print(cont_gen(file_cont='AV is largest Analytics community of India'))
+    # print(cont_gen(file_cont={'AV is  largest Analytics community of India.'}))
+
+    print(write_to_file(file_name='r_test', f_ext='txt',
+                        fdata=cont_gen(file_cont='AV is largest Analytics community of India')))
+
+    # print(write_to_file(file_name='r_test', f_ext='tt',
+    #                     fdata=cont_gen(file_cont='AV is largest Analytics community of India')))
+
+    print(one_sym(my_filename='r_test', f_ext='txt'))
+    # print(one_sym(my_filename='r_test', f_ext='tt'))
+
+    print(one_letter(my_filename='r_test', f_ext='txt'))
+    # print(one_letter(my_filename='r_test', f_ext='tt'))
+
+    print(letters_with_spaces(my_filename='r_test', f_ext='txt'))
+    # print(letters_with_spaces(my_filename='r_test', f_ext='tt'))
+
+    print(letters_only(my_filename='r_test', f_ext='txt'))
+    # print(letters_only(my_filename='r_test', f_ext='tt'))
+
     print(first_word_only(text_str='AV is largest Analytics community of India'))
     # print(first_word_only(text_str=123))
 
     print(last_word_only(text_str='AV is largest Analytics community of India'))
     # print(last_word_only(text_str=123))
 
-    print(two_letters_from_begin_no_spaces(my_filename='test', f_ext='txt'))
-    # print(two_letters_from_begin_no_spaces(my_filename='test', f_ext='tt'))
+    print(two_letters_from_begin_no_spaces(my_filename='r_test', f_ext='txt'))
+    # print(two_letters_from_begin_no_spaces(my_filename='r_test', f_ext='tt'))
 
-    print(two_letters_from_begin_no_spaces_as_word(my_filename='test', f_ext='txt'))
-    # print(two_letters_from_begin_no_spaces_as_word(my_filename='test', f_ext='tt'))
+    print(two_letters_from_begin_no_spaces_as_word(my_filename='r_test', f_ext='txt'))
+    # print(two_letters_from_begin_no_spaces_as_word(my_filename='r_test', f_ext='tt'))
 
     print(dom_finder(text_str='abc.test@gmail.com, xyz@test.in, test.first@analyticsvidhya.com, first.test@rest.biz'))
     # print(dom_finder(text_str=123))

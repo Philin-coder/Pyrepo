@@ -69,3 +69,10 @@ def sym_counter(c_data: list, ch: str) -> int:
         return k
     else:
         raise TypeError('Передан не список, либо список пуст ')
+
+
+if __name__ == '__main__':
+    print(cont_gen(text_str='просто данные'))
+    print(write_to_file(my_filename='c_test', f_ext='txt', fdata=cont_gen(text_str='просто данные ')))
+    print(file_reader(my_filename='c_test', f_ext='txt'))
+    print(sym_counter(c_data=file_reader(my_filename='c_test', f_ext='txt'), ch='о'))

@@ -7,6 +7,7 @@ def reader(my_filename, fext2, ch):
     k = 0
     with open(my_filename + '.' + fext2, 'r', encoding='utf-8') as fp:
         data = fp.readlines()
+        print(type(ch))
     print(data)
     for i in ''.join(data):
         if i.lower() == ch:

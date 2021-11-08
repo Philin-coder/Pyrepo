@@ -22,7 +22,8 @@ def write_to_file(my_filename: str, f_ext: str, fdata: str) -> str:
     :param f_ext: Расширение .
     :param fdata: Записываемые данные.
     :return: код состояния(успешна ли запись).
-    >>> write_to_file(my_filename='c_test', f_ext='txt', fdata=cont_gen(text_str='просто данные '))
+    Образец вызова.
+     write_to_file(my_filename='c_test', f_ext='txt', fdata=cont_gen(text_str='просто данные '))
     'file_created'
     """
     if isinstance(f_ext, str) and f_ext == 'txt':
@@ -40,7 +41,8 @@ def file_reader(my_filename: str, f_ext: str) -> list:
     :param my_filename:Имя файла.
     :param f_ext: Расширение.
     :return: Прочитанные данные.
-    >>> file_reader(my_filename='c_test', f_ext='txt')
+    Образец вызова.
+    file_reader(my_filename='c_test', f_ext='txt')
     ['просто данные \n']
     """
     if os.path.isfile(my_filename + '.' + f_ext):
@@ -58,7 +60,8 @@ def sym_counter(c_data: list, ch: str) -> int:
     :param c_data: Считанные из файла данные.
     :param ch: Символ, количество которых подсчитывается.
     :return: Количество символов равных введенному в файле.
-    >>> sym_counter(c_data=file_reader(my_filename='c_test', f_ext='txt'), ch='о')
+    Образец вызова.
+    sym_counter(c_data=file_reader(my_filename='c_test', f_ext='txt'), ch='о')
     2
     """
     if isinstance(c_data, list) and len(c_data) != 0 and ch != '\n':
@@ -69,10 +72,3 @@ def sym_counter(c_data: list, ch: str) -> int:
         return k
     else:
         raise TypeError('Передан не список, либо список пуст ')
-
-
-if __name__ == '__main__':
-    print(cont_gen(text_str='просто данные'))
-    print(write_to_file(my_filename='c_test', f_ext='txt', fdata=cont_gen(text_str='просто данные ')))
-    print(file_reader(my_filename='c_test', f_ext='txt'))
-    print(sym_counter(c_data=file_reader(my_filename='c_test', f_ext='txt'), ch='о'))

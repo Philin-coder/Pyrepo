@@ -5,6 +5,7 @@ import doctest
 import sys
 
 
+@skipUnless(sys.platform.startswith("win"), "requires Windows")
 def load_tests(loader, tests, ignore):
     tests.addTests(doctest.DocTestSuite(disk_letterer))
     return tests

@@ -65,8 +65,8 @@ class Search(TestCase):
     def test_max_digit_finder(self):
         self.assertEqual(max_digit_finder(conv_data=file_reader(file_name='wiki_test', f_ext='txt')), 2004)
 
-    # def test_digit_finders_is_int(self):
-    #     self.assertIsInstance(max_digit_finder(conv_data=file_reader(file_name='wiki_test', f_ext='txt')), int)
+    def test_digit_finders_is_int(self):
+        self.assertIsInstance(max_digit_finder(conv_data=file_reader(file_name='wiki_test', f_ext='txt')), int)
 
     def test_max_digit_finder_wrong(self):
         with self.assertRaises(TypeError) as e:

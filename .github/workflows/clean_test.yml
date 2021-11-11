@@ -28,6 +28,7 @@ jobs:
           pip install xlsxwriter 
           pip install pdfminer 
           pip install requests 
+          pip install wikipedia 
           python -m pip install --upgrade pip
 
           pip install flake8 pytest

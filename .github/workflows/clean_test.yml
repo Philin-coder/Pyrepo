@@ -27,6 +27,7 @@ jobs:
           pip install numpy 
           pip install xlsxwriter 
           pip install pdfminer 
+          pip install requests 
           python -m pip install --upgrade pip
 
           pip install flake8 pytest

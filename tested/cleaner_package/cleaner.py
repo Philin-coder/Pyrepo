@@ -25,7 +25,7 @@ def write_to_file(file_name: str, f_ext: str, f_data: str) -> str:
     :param f_data: записываемые данные.
     :return: Код состояния(успешна ли запись).
     Образец вызова.
-    write_to_file(file_name='wiki2', f_ext='txt', f_data=cont_gen(title_str='Python'))
+    write_to_file(file_name='wiki2', f_ext='txt', f_data=cont_gen(title_str='PYTHON'))
     """
     if isinstance(f_ext, str) and f_ext == 'txt':
         with open(file_name + '.' + f_ext, 'w', encoding='utf-16') as fp:

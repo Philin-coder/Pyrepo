@@ -21,7 +21,7 @@ class RegReadWriteTest(TestCase):
         self.assertIsNotNone(cont_gen(title_str='PYTHON'))
 
     def test_alpha_and_nums(self):
-        self.assertTrue((any([i.isdigit() for i in cont_gen(title_str='PYTHON')]) and (any(
+        self.assertTrue((any([i.isdigit() for i in cont_gen(title_str='python')]) and (any(
             [i.isalpha() for i in cont_gen(title_str='PYTHON')]))), 'не содержит цифр и букв')
 
     def test_get_content_wrong(self):

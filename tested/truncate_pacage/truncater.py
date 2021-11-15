@@ -41,7 +41,7 @@ def reader(my_filename: str, f_ext: str) -> list:
     Чтение файла.
     :param my_filename: имя файла.
     :param f_ext: расширение.
-    :return:Данные,прочитаные из файла.
+    :return:Данные,прочитанные из файла.
     Образец вызова
     reader(my_filename='tr_test', f_ext='txt')
     ['to_be_truncated_string\n'

@@ -1,7 +1,6 @@
 from unittest import TestCase, main
-from method_explorer_package import method_explorer_mod
+from tested.method_explorer_package import method_explorer_mod
 from tested.method_explorer_package.method_explorer_mod import *
-
 import doctest
 
 

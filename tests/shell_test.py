@@ -1,7 +1,8 @@
-from unittest import TestCase, main
-from shell_comand_package import sheler
-from shell_comand_package.sheler import shell_commander
+from unittest import TestCase, main, skipUnless
+from tested.shell_comand_package import sheler
+from tested.shell_comand_package.sheler import shell_commander
 import doctest
+import sys
 
 
 def load_tests(loader, tests, ignore):
@@ -10,6 +11,7 @@ def load_tests(loader, tests, ignore):
 
 
 class MyTestShell(TestCase):
+    @skipUnless(sys.platform.startswith("win"), "requires Windows")
     def test_works(self):
         self.assertEqual(shell_commander(text_str='ping ya.ru'), 'command done')
 

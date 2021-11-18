@@ -4,7 +4,7 @@ import subprocess
 def shell_commander(text_str: str) -> str:
     """
     Работа с командами и subprocess.
-    :param text_str: команда
+    :param text_str: команда.
     :return: код состояния
     Образец вызова
     shell_commander(text_str='ping ya.ru')

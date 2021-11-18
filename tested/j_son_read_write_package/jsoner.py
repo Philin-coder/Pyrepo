@@ -78,17 +78,3 @@ def as_str(f_data: dict):
         return str(f_data.keys()).removeprefix('dict_keys([').removesuffix('])').replace('\'', '').replace(',', ' ')
     else:
         raise TypeError('Передан неверный тип данных')
-
-
-if __name__ == '__main__':
-    print(cont_gen(text_str='to be writen in Json'))
-    print(data_convert(conv_data=cont_gen(text_str='to be writen in Json')))
-
-    print(write_file(file_name='data', f_ext='json',
-                     f_data=data_convert(conv_data=cont_gen(text_str='to be writen in Json'))))
-
-    print(file_read(file_name='data', f_ext='json'))
-    # print(file_read(file_name='data', f_ext='234son'))
-
-    print(as_str(f_data=file_read(file_name='data', f_ext='json')))
-    # print(as_str(f_data=tuple(file_read(file_name='data', f_ext='json'))))

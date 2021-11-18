@@ -29,6 +29,7 @@ jobs:
           pip install pdfminer 
           pip install requests 
           pip install wikipedia 
+          pip install bs4 
           python -m pip install --upgrade pip
 
           pip install flake8 pytest

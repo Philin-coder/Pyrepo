@@ -26,7 +26,7 @@ class GetWebPageTest(TestCase):
                         is True,
                         'нет букв')
 
-    def test_tuple_gen_func_wrong(self):
+    def test_page_get_func_wrong(self):
         with self.assertRaises(TypeError) as e:
             page_get_func(url='')
         self.assertEqual('Передан неверный тип данных, или -пустая строка', e.exception.args[0])

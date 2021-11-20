@@ -6,7 +6,7 @@ from time import sleep
 import pygame
 
 
-class app(Frame):
+class App(Frame):
     root = Tk()
     root.geometry("640x480")
 
@@ -19,4 +19,4 @@ class app(Frame):
     root.mainloop()
     sleep(3)
     root.quit()
-    run = app()
+    run = App()

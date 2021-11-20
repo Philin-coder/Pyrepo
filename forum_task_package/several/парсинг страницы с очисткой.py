@@ -36,5 +36,6 @@ def get_html(url):
         print(l)
 
 
+
 if __name__ == '__main__':
     get_html(url)

@@ -15,6 +15,9 @@ class MyHTMLParser(HTMLParser):
         # записываем список ссылок в файл
         self.write_to_file()
 
+    def write_to_file(self):
+        pass
+
 
 def handle_starttag(self, tag, attrs):
     # проверяем является ли тэг тэгом ссылки

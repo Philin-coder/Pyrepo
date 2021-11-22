@@ -24,4 +24,5 @@ class MyMegaGurrenLagenList:
 
 ls = MyMegaGurrenLagenList()
 ls.add(42)
+
 print(ls.tail)

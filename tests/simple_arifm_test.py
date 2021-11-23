@@ -18,10 +18,10 @@ class SimArTest(TestCase):
         self.assertIsInstance(suber(x=perv(a=12), y=perv(a=1)), str)
 
     def test_prev_right(self):
-        self.assertEqual(perv(a=12), 8.71673508601987)
+        self.assertAlmostEqual(perv(a=12), 8.71673508601987)
 
     def test_suber_right(self):
-        self.assertEqual(suber(x=perv(a=12), y=perv(a=1)), 'точное значение интеграла 8.44405944272629')
+        self.assertAlmostEqual(suber(x=perv(a=12), y=perv(a=1)), 'точное значение интеграла 8.44405944272629')
 
     def test_perv_wrong(self):
         with self.assertRaises(TypeError) as e:

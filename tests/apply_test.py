@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MyTestCase(TestCase):
+class AplTest(TestCase):
     def test_is_tuple(self):
         self.assertIsInstance(apply_example(*[1, 2, 3], **{'a': 4, 'b': 5}), tuple)
 

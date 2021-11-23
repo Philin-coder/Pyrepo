@@ -1,16 +1,17 @@
 import fnmatch
 
 
-def matcher(f, n):
+def matcher(f):
     for i in range(5):
-        if fnmatch.fnmatch(f, n):
+        if fnmatch.fnmatch(f):
             mlist.append('YES')
         else:
             mlist.append('NO')
-        print('\n'.join(mlist))
+        return '\n'.join(mlist)
 
 
 if __name__ == '__main__':
     mlist = []
     f = input()
-    m = input()
+    n = input()
+    print(matcher(f='*.py'))

@@ -5,6 +5,7 @@ from tested.arifm_package.sim_arifm import suber
 import doctest
 
 
+
 def load_tests(loader, tests, ignore):
     tests.addTests(doctest.DocTestSuite(sim_arifm))
     return tests

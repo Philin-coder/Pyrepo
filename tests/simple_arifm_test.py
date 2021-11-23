@@ -1,10 +1,12 @@
-from unittest import TestCase, main
+from unittest import TestCase, main, skipUnless
 from tested.arifm_package import sim_arifm
 from tested.arifm_package.sim_arifm import perv
 from tested.arifm_package.sim_arifm import suber
 import doctest
+import sys
 
 
+@skipUnless(sys.platform.startswith("win"), "requires Windows")
 def load_tests(loader, tests, ignore):
     tests.addTests(doctest.DocTestSuite(sim_arifm))
     return tests
@@ -14,14 +16,17 @@ class SimArTest(TestCase):
     def test_perv_is_float(self):
         self.assertIsInstance(perv(a=12), float)
 
+    @skipUnless(sys.platform.startswith("win"), "requires Windows")
     def test_suber_is_str(self):
         self.assertIsInstance(suber(x=perv(a=12), y=perv(a=1)), str)
 
+    @skipUnless(sys.platform.startswith("win"), "requires Windows")
     def test_prev_right(self):
-        self.assertAlmostEqual(perv(a=12), 8.71673508601987)
+        self.assertEqual(perv(a=12), 8.71673508601987)
 
+    @skipUnless(sys.platform.startswith("win"), "requires Windows")
     def test_suber_right(self):
-        self.assertAlmostEqual(suber(x=perv(a=12), y=perv(a=1)), 'точное значение интеграла 8.44405944272629')
+        self.assertEqual(suber(x=perv(a=12), y=perv(a=1)), 'точное значение интеграла 8.44405944272629')
 
     def test_perv_wrong(self):
         with self.assertRaises(TypeError) as e:

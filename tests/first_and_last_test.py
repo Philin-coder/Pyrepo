@@ -28,6 +28,12 @@ class RegTest(TestCase):
         self.assertEqual(word_finder(
             text_str=' Дана строка. Найти в этой строке слова, которые начинаються и оканчиваються на одну и ту '), [])
 
+    def test_masked_digs(self):
+        with self.assertRaises(TypeError) as e:
+            word_finder(text_str='То,оно,  которое (задание), само себя не сделает123')
+        self.assertEqual('Передан неверный тип данных', e.exception.args[0])
+
+
 
 if __name__ == '__main__':
     main()

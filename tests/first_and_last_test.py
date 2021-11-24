@@ -34,6 +34,5 @@ class RegTest(TestCase):
         self.assertEqual('Передан неверный тип данных', e.exception.args[0])
 
 
-
 if __name__ == '__main__':
     main()

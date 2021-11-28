@@ -1,9 +1,7 @@
 from tkinter import *
-import socket
-import os
+
 from PIL import Image, ImageTk
 from time import sleep
-import pygame
 
 
 class App(Frame):
@@ -19,4 +17,3 @@ class App(Frame):
     root.mainloop()
     sleep(3)
     root.quit()
-    run = App()

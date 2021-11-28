@@ -13,5 +13,4 @@ def loader(tks):
 
 
 if __name__ == '__main__':
-    tks = ''
-    loader(tks)
+    loader(tks='')

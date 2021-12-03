@@ -9,7 +9,7 @@ def load_tests(loader, tests, ignore):
     return tests
 
 
-class MetFidnerTest(TestCase):
+class MetFinderTest(TestCase):
     def test_is_meth_str(self):
         self.assertEqual(met_finder_func(meth='str'),
                          ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',

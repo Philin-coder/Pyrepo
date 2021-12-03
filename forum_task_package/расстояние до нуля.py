@@ -15,4 +15,4 @@ for i in range(len(a)):
                 right = k
                 break
         a[i] = min(left, right)
-print(a)
+    print(a)

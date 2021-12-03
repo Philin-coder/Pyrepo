@@ -58,9 +58,7 @@ class MyAvgTest(TestCase):
     def test_avg_of_file_zero_div(self):
         with self.assertRaises(ZeroDivisionError) as e:
             avg_of_file(avg_data=[])
-        self.assertEqual('на ноль делить грешно ',e.exception.args[0])
-
-
+        self.assertEqual('на ноль делить грешно ', e.exception.args[0])
 
 
 if __name__ == '__main__':

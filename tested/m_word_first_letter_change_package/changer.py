@@ -13,5 +13,3 @@ def changer_word_first_letters_func(text_str: str) -> str:
         return ''.join([i[0] for i in text_str.split()])
     else:
         raise TypeError('Введите  непустую  строку')
-
-

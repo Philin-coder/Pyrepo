@@ -77,5 +77,3 @@ def as_it_was(fdata: dict) -> [str, list]:
         return str(list(map(str, fdata.keys()))).replace('\'', '').removesuffix(']').removeprefix('[')
     else:
         raise TypeError('Передан неверный тип данных')
-
-

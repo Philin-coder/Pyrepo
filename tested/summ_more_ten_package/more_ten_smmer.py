@@ -10,5 +10,3 @@ def sum_more_ten(ints: list) -> int:
         return sum([i for i in ints if i > 10])
     else:
         raise TypeError('Передан неверный  тип данных')
-
-

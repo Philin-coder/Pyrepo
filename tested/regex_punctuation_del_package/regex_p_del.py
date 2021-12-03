@@ -28,6 +28,3 @@ def reg_del_pun(text_str: str) -> str:
         raise ValueError('Введите непустую строку')
     else:
         raise TypeError(f'Введите непустую строку, а не {type(text_str).__name__}')
-
-
-

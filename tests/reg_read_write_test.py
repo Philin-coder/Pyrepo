@@ -30,7 +30,8 @@ class RegReadWriteTest(TestCase):
         self.assertEqual('Передан неверный тип данных, или -пустая строка', e.exception.args[0])
 
     def test_write_to_file_right(self):
-        self.assertEqual(write_to_file(file_name='wiki2', f_ext='txt', f_data=cont_gen(title_str='python')),
+        self.assertEqual(write_to_file(file_name='wiki2', f_ext='txt',
+                                       f_data=cont_gen(title_str='Python (programming language)')),
                          'file_created')
 
     def test_write_to_file_wrong(self):

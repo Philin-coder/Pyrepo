@@ -4,9 +4,9 @@ import os
 def cont_gen(n: int) -> list:
     """
     Генерация контента для файла.
-    :param n:  диапазон чисел.
+    :param n: диапазон чисел.
     :return: список чисел, соответствующий диапазону.
-    >>> cont_gen(n=8)
+    Образец вызова cont_gen(n=8)
     [1, 2, 3, 4, 5, 6, 7, 8]
     """
     if isinstance(n, int) and n != 0 and n > 0:
@@ -23,7 +23,7 @@ def write_to_file(file_name: str, f_ext: str, f_data: list) -> str:
     :param f_ext: расширение.
     :param f_data: данные, которые будут записаны в файл..
     :return:
-    >>> write_to_file(file_name='avg_file', f_ext='txt', f_data=cont_gen(n=8))
+    Образец вызова  write_to_file(file_name='avg_file', f_ext='txt', f_data=cont_gen(n=8))
     'file_created'
     """
     if isinstance(file_name, str) and isinstance(f_ext, str) and f_ext == 'txt':
@@ -41,7 +41,7 @@ def read_from_file(file_name: str, f_ext: str) -> list:
     :param file_name: имя файлаю
     :param f_ext: расширение.
     :return: читаемые данные.
-    >>> read_from_file(file_name='avg_file', f_ext='txt')
+    Образец вызова  read_from_file(file_name='avg_file', f_ext='txt')
     ['[1, 2, 3, 4, 5, 6, 7, 8]\n']
     """
     if os.path.isfile(file_name + '.' + f_ext):
@@ -73,7 +73,7 @@ def avg_of_file(avg_data: list) -> float:
     Вывод среднего.
     :param avg_data:исходный список.
     :return:среднее
-    >>> avg_of_file(avg_data=conv_to_int(fdata=read_from_file(file_name='avg_file', f_ext='txt')))
+    Образец вызова avg_of_file(avg_data=conv_to_int(fdata=read_from_file(file_name='avg_file', f_ext='txt')))
     4.5
     """
     if isinstance(avg_data, list) and all(isinstance(i, int) for i in avg_data):

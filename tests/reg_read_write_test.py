@@ -35,7 +35,7 @@ class RegReadWriteTest(TestCase):
 
     def test_write_to_file_wrong(self):
         with self.assertRaises(ValueError) as e:
-            write_to_file(file_name='wiki2', f_ext='tt', f_data=cont_gen(title_str='python'))
+            write_to_file(file_name='wiki2', f_ext='tt', f_data=cont_gen(title_str='Python (programming language)'))
         self.assertEqual('Файл имеет неверный тип', e.exception.args[0])
 
     def test_file_reader_is_str(self):

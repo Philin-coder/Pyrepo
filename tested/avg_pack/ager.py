@@ -57,7 +57,7 @@ def conv_to_int(fdata: list) -> list:
     Конвертация в числа, прочитанной строки.
     :param fdata: считанный список(строк)
     :return: список чисел
-    >>> conv_to_int(fdata=read_from_file(file_name='avg_file', f_ext='txt'))
+    Образец вызова conv_to_int(fdata=read_from_file(file_name='avg_file', f_ext='txt'))
     [1, 2, 3, 4, 5, 6, 7, 8]
     """
     if isinstance(fdata, list) and fdata is not None:

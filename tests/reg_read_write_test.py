@@ -15,14 +15,14 @@ def load_tests(loader, tests, ignore):
 
 class RegReadWriteTest(TestCase):
     def test_cont_gen_is_str(self):
-        self.assertIsInstance(cont_gen(title_str='python'), str)
+        self.assertIsInstance(cont_gen(title_str='Python (programming language)'), str)
 
     def test_get_content_is_not_empty(self):
-        self.assertIsNotNone(cont_gen(title_str='python'))
+        self.assertIsNotNone(cont_gen(title_str='Python (programming language)'))
 
     def test_alpha_and_nums(self):
         self.assertTrue((any([i.isdigit() for i in cont_gen(title_str='python')]) and (any(
-            [i.isalpha() for i in cont_gen(title_str='python')]))), 'не содержит цифр и букв')
+            [i.isalpha() for i in cont_gen(title_str='Python (programming language)')]))), 'не содержит цифр и букв')
 
     def test_get_content_wrong(self):
         with self.assertRaises(TypeError) as e:
@@ -35,7 +35,7 @@ class RegReadWriteTest(TestCase):
 
     def test_write_to_file_wrong(self):
         with self.assertRaises(ValueError) as e:
-            write_to_file(file_name='wiki2', f_ext='tt', f_data=cont_gen(title_str='PYTHON'))
+            write_to_file(file_name='wiki2', f_ext='tt', f_data=cont_gen(title_str='python'))
         self.assertEqual('Файл имеет неверный тип', e.exception.args[0])
 
     def test_file_reader_is_str(self):

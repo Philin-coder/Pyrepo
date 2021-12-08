@@ -7,6 +7,7 @@ def guess_number(var2: int) -> str:
     :param var2:загаданное число.
     :return: Строка, сообщение пользователю о том, какое число за сколько попыток угадали.
     Образец вызова
+    guess_number(var2=78)
     """
     if isinstance(var2, int):
         attempts = 1
@@ -22,8 +23,3 @@ def guess_number(var2: int) -> str:
         return f'Вы угадали число {var1} за {attempts} попыток '
     else:
         raise TypeError('передан неверный тип данных')
-
-
-if __name__ == '__main__':
-    # print(guess_number(var2=78))
-    print(guess_number(var2='78'))

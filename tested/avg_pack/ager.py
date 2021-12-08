@@ -38,7 +38,7 @@ def write_to_file(file_name: str, f_ext: str, f_data: list) -> str:
 def read_from_file(file_name: str, f_ext: str) -> list:
     """
     Чтение из файла
-    :param file_name: имя файлаю
+    :param file_name: имя файла.
     :param f_ext: расширение.
     :return: читаемые данные.
     Образец вызова  read_from_file(file_name='avg_file', f_ext='txt')

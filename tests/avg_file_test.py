@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from avg_pack import ager
+from tested.avg_pack import ager
 from tested.avg_pack.ager import cont_gen
 from tested.avg_pack.ager import write_to_file
 from tested.avg_pack.ager import read_from_file

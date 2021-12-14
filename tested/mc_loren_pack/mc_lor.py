@@ -2,6 +2,17 @@ import math
 
 
 def mck_loren(x: float, e: float, km: int) -> [tuple, float]:
+    """
+    >>> mck_loren(x=12.0, e=15.1, km=4)
+    достигнутая точность= 1.0  сумма= 1  k= 0
+    ('аналитически=', 81377.39571257407)
+
+    Уравнение Мак лорена.
+    :param x:Входной параметр.
+    :param e: Входной параметр.
+    :param km: Входной параметр.
+    :return: Результат подсчета.
+    """
     s = 1
     k = 0
     t = 1
@@ -18,7 +29,3 @@ def mck_loren(x: float, e: float, km: int) -> [tuple, float]:
         return 'аналитически=', (math.exp(x) + math.exp(-x)) / 2
     else:
         raise TypeError('Передан неверный тип данных')
-
-
-if __name__ == '__main__':
-    print(mck_loren(x=float(input()), e=float(input()), km=int(input('итерации'))))

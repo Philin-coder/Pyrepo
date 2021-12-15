@@ -9,7 +9,6 @@ def speach_defect(text: str) -> list[str]:
     ю print_without_duplicates(message). Напишите её.
     :param text: входной текст
     :return:результирующий текст
-     
     """
     if isinstance(text, str) and text != '' and text is not None:
         sp = text.split('\n')
@@ -25,16 +24,3 @@ def speach_defect(text: str) -> list[str]:
             return words
     else:
         raise TypeError('Передан неверный тип данных')
-
-
-if __name__ == '__main__':
-    print(speach_defect(text="""\
-    Привет
-    Не могу до тебя дозвониться
-    Не могу до тебя дозвониться
-    Не могу до тебя дозвониться
-    Когда доедешь до дома
-    Ага, жду
-    Ага, жду"""))
-
-

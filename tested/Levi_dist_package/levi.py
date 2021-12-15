@@ -9,24 +9,25 @@ def distance(a: str, b: str) -> int:
     :param a: Первая строка.
     :param b: Вторая строка.
     :return: Расстояние Левенштейна.
+    >>> distance(a='hi men', b='hi all')
+    3
     """
-    n, m = len(a), len(b)
-    if n > m:
-        # убедимся что n <= m, чтобы использовать минимум памяти O(min(n, m))
-        a, b = b, a
-        n, m = m, n
+    if isinstance(a, str) and isinstance(b, str) and a != '' and b != '':
+        n, m = len(a), len(b)
+        if n > m:
+            # убедимся что n <= m, чтобы использовать минимум памяти O(min(n, m))
+            a, b = b, a
+            n, m = m, n
 
-    current_row = range(n + 1)  # 0 ряд - просто восходящая последовательность (одни вставки)
-    for i in range(1, m + 1):
-        previous_row, current_row = current_row, [i] + [0] * n
-        for j in range(1, n + 1):
-            add, delete, change = previous_row[j] + 1, current_row[j - 1] + 1, previous_row[j - 1]
-            if a[j - 1] != b[i - 1]:
-                change += 1
-            current_row[j] = min(add, delete, change)
+        current_row = range(n + 1)  # 0 ряд - просто восходящая последовательность (одни вставки)
+        for i in range(1, m + 1):
+            previous_row, current_row = current_row, [i] + [0] * n
+            for j in range(1, n + 1):
+                add, delete, change = previous_row[j] + 1, current_row[j - 1] + 1, previous_row[j - 1]
+                if a[j - 1] != b[i - 1]:
+                    change += 1
+                current_row[j] = min(add, delete, change)
 
-    return current_row[n]
-
-
-if __name__ == '__main__':
-    print(distance(a='hi men', b='hi all'))
+        return current_row[n]
+    else:
+        raise TypeError('Передан неверный тип данных,либо - пустая строка')

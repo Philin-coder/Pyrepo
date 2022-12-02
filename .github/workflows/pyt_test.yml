@@ -5,11 +5,11 @@ name: Python application
 
 on:
   push:
-    branches:
-      -'*'
+    branch: ["pytester"]
+
+
   pull_request:
-    branches:
-    -'*'
+    branch: ["pytester"]
 
 jobs:
   build:
@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - strategy:
       - uses: actions/checkout@v2
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
@@ -45,5 +46,5 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          python run test -v
+          python run pytest -v
 

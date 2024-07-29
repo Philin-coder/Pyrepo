@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
     <title>test_view</title>
 </head>
 <body>
+    <h1>Зимний лес</h1>
+    <img src="{% static "images/forest.jpg" %}" alt="зимний лес" >
     <!-- <h1> Тестовая вьюшка</h1> -->
      <!-- <h2>{{header}}</h2>
      <h2>{{message}}</h2> -->
@@ -54,7 +58,7 @@
 <p>{% now "F j Y" %}</p>
 <p>{% now "N, j, Y" %}</p>
 <p>{% now "N j, Y, P" %}</p -->
-<div> 
+<!-- <div>  -->
     <!-- {% with message="hello" %}
     
     <h2> {{ message|add:" Django" |capfirst }}</h2>
@@ -75,10 +79,10 @@
 <!-- {% with value=34232.34 %}
     {{ value|floatformat:"2g" }}
 {% endwith %} -->
-<h2>{{ my_date|date:"d.m.Y" }}</h2>
+<!-- <h2>{{ my_date|date:"d.m.Y" }}</h2>
 <h2>{{ my_date|date:"H:i" }}</h2>
 <h2>{{ my_date|date:"c" }}</h2>
 <h2>{{ my_date|date:"SHORT_DATE_FORMAT" }}</h2>
-</div>
+</div> -->
 </body>
 </html>

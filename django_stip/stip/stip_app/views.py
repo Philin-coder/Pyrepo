@@ -12,14 +12,14 @@ from datetime import datetime
 
 def index(request):
     # langs=[]
-    data = {"red": "красный", "green": "зеленый", "blue":"синий"}
-    langs=["Python", "JavaScript", "Java", "C#", "C++"]
-    return render(request, "index.html",context={"my_date":datetime.now()})
-    #return render(request, "index.html",context={"langs":langs})      
-    # return render(request, "index.html",context={"data":data})      
+    data = {"red": "красный", "green": "зеленый", "blue": "синий"}
+    langs = ["Python", "JavaScript", "Java", "C#", "C++"]
+    return render(request, "index.html", context={"my_date": datetime.now()})
+    # return render(request, "index.html",context={"langs":langs})
+    # return render(request, "index.html",context={"data":data})
     # data={"n":5}
     # return render(request, "index.html", context=data)
-    #return render(request, "index.html", context={"body": "<h1>Hello ,world</h1>"})
+    # return render(request, "index.html", context={"body": "<h1>Hello ,world</h1>"})
     # header = "Данные  пользователя"
     # langs = ["Python", "Java", "C#"]
     # user = {"name": "Tom", "age": 23}

@@ -27,7 +27,7 @@ product_patterns = [
 
 
 urlpatterns = [
-    #path('index/<int:id>', views.index),
+    # path('index/<int:id>', views.index),
     path('', views.index),
     # path('about',views.about,kwargs={"name":"Tom", "age": 38}),
     path('about/', views.about),
@@ -36,7 +36,7 @@ urlpatterns = [
     path("user/", views.user),
     path("products/<int:id>", include(product_patterns)),
     path("details", views.details),
-    path("set",views.set),
-    #path("access/<int:age>", views.access),
-    path("get",views.get),
+    path("set", views.set),
+    # path("access/<int:age>", views.access),
+    path("get", views.get),
 ]

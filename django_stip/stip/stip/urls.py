@@ -36,5 +36,7 @@ urlpatterns = [
     path("user/", views.user),
     path("products/<int:id>", include(product_patterns)),
     path("details", views.details),
+    path("set",views.set),
     #path("access/<int:age>", views.access),
+    path("get",views.get),
 ]

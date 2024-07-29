@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_view</title>
+</head>
+<body>
+    <!-- <h1> Тестовая вьюшка</h1> -->
+     <!-- <h2>{{header}}</h2>
+     <h2>{{message}}</h2> -->
+     <!-- <h1>{{header}} <h1> -->
+     <!-- <p>Имя:{{user.name}} Возраст: {{user.age}}</p>   
+     <p>Адрес : ул {{adress.0}},д{{adress.1}},кв{{adress.2}}</p>
+    <p>Языки{{langs.0}}, {{langs.1}} </p>  -->
+<!-- <h1> Person {{person.name}} {{person.age}}</h1> -->
+ <!-- {{body}}
+ {% autoescape off%}
+ {{body}}
+ {% endautoescape  %} -->
+ <!-- {% if n > 0 %}
+ <p> число полложительное </p>
+ {% endif %} -->
+<!-- {%if n > 0%}
+<p>число положительное </p>
+ {%else %}
+     <p> число не  положительное </p>
+{ % else% }
+<p> число =0 </p>
+{% endif %} -->
+<!-- {% if a > 0 and b > 0 %}
+    <p>{{ a }}</p>
+{% else %}
+    <p>{{ b }}</p>
+{% endif %} -->
+<!-- <ul>
+{%  for lan in langs  %}   
+<li>{{  lan  }}</li>
+{% empty %}
+<li>Langs array is empty </li>
+{%  endfor  %}
+
+</ul>    -->
+<!-- {% for key, value in data.items %}
+<p>{{ key }}: {{ value }}</p>
+{% endfor %} -->
+<!-- {% with name="Tom" age=29 %}
+    <div>
+        <p>Name: {{ name }}</p>
+        <p>Age: {{ age }}</p>
+    </div>
+{% endwith %} -->
+<!-- <p>{% now "Y" %}</p>
+<p>{% now "F j Y" %}</p>
+<p>{% now "N, j, Y" %}</p>
+<p>{% now "N j, Y, P" %}</p -->
+<div> 
+    <!-- {% with message="hello" %}
+    
+    <h2> {{ message|add:" Django" |capfirst }}</h2>
+    
+    {% endwith %} -->
+    <!-- {% with message="Я был дома" %}
+    {{ message|cut:"был" }}
+    {% endwith %} -->
+    <!-- {% with isEnabled=False %}
+    {{ isEnabled|default:"unabled" }}
+{% endwith %} -->
+<!-- {% with name="" %}
+    {{ name|default:"Undefined" }}
+{% endwith %} -->
+<!-- {% with user=None %}
+    {{ user|default_if_none:"Undefined" }}
+{% endwith %} -->
+<!-- {% with value=34232.34 %}
+    {{ value|floatformat:"2g" }}
+{% endwith %} -->
+<h2>{{ my_date|date:"d.m.Y" }}</h2>
+<h2>{{ my_date|date:"H:i" }}</h2>
+<h2>{{ my_date|date:"c" }}</h2>
+<h2>{{ my_date|date:"SHORT_DATE_FORMAT" }}</h2>
+</div>
+</body>
+</html>

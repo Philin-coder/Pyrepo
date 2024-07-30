@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.urls import path, re_path, include
 from stip_app import views
-
+from django.views.generic import TemplateView
 product_patterns = [
     path("", views.products),
     path("new", views.new),
@@ -30,8 +30,11 @@ urlpatterns = [
     # path('index/<int:id>', views.index),
     path('', views.index),
     # path('about',views.about,kwargs={"name":"Tom", "age": 38}),
-    path('about/', views.about),
-    path('contact/', views.contact),
+    # path('about/', views.about),
+    # path('contact/', views.contact),
+    path('about/', TemplateView.as_view(template_name="about.html",
+         extra_context={"header": "О сайте"})),
+    path('contacts/', TemplateView.as_view(template_name="contacts.html")),
     # re_path(r"^user/(?P<name>\D+)/(?P<age>\d+)",views.user),
     path("user/", views.user),
     path("products/<int:id>", include(product_patterns)),

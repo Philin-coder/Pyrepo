@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact view</title>
-</head>
-<body>
-    <h1>Test Contact</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Контакты{% endblock title %}
+{% block header %}Контакты{% endblock header %}
+  
+{% block content %}
+<p>Телефон: +12345677890</p>
+<p>Email: admin@admin.com</p>
+{% endblock content %}

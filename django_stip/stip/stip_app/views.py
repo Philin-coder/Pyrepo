@@ -12,14 +12,23 @@ from .forms import UserForm
 
 
 def index(request):
-    if request.method=="POST":
-        name=request.POST.get("name")
-        age=request.POST.get("age")
-        return HttpResponse(f"<h2> Привет, {name}, твой возраст {age}</h2>") 
+    if request.method == "POST":
+        userform = UserForm(request.POST)
+        if userform.is_valid():
+            name = userform.changed_data["name"]
+            return HttpResponse(f"<h2> Hello, {name}</h2>")
+        else:
+            return HttpResponse("invalid data")
     else:
         userform = UserForm()
         return render(request, "index.html", {"form": userform})
 
+        # name=request.POST.get("name")
+        # age=request.POST.get("age")
+        # return HttpResponse(f"<h2> Привет, {name}, твой возраст {age}</h2>")
+    # else:
+    #     userform = UserForm()
+    #     return render(request, "index.html", {"form": userform})
 
     # userform = UserForm()
     # return render(request, "index.html", {"form": userform})

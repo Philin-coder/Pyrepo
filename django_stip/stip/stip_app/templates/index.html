@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testview</title>
+    <title>Document</title>
 </head>
 <body>
-<h2>Главная страница</h2>
-{% include "banner.html" with tutorial="Python" only %}
+    <form method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Send" >
+</form>
+<h2>as_ul</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <ul>
+        {{ form.as_ul }}
+    </ul>
+    <input type="submit" name="" id="" value="Send">
+</form>
+<h2>as_p</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.as_p }}
+    </div>
+    <input type="submit" name="" id="" value="Send">
+</form>
 </body>
 </html>

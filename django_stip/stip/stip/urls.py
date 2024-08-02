@@ -42,4 +42,5 @@ urlpatterns = [
     path("set", views.set),
     # path("access/<int:age>", views.access),
     path("get", views.get),
+    path("postuser/",views.postuser),
 ]

@@ -8,13 +8,25 @@ from django.http import JsonResponse
 from pip._vendor.requests.api import request
 from django.core.serializers.json import DjangoJSONEncoder
 from datetime import datetime
+from .forms import UserForm
 
 
 def index(request):
+    if request.method=="POST":
+        name=request.POST.get("name")
+        age=request.POST.get("age")
+        return HttpResponse(f"<h2> Привет, {name}, твой возраст {age}</h2>") 
+    else:
+        userform = UserForm()
+        return render(request, "index.html", {"form": userform})
+
+
+    # userform = UserForm()
+    # return render(request, "index.html", {"form": userform})
     # langs=[]
     # data = {"red": "красный", "green": "зеленый", "blue": "синий"}
     # langs = ["Python", "JavaScript", "Java", "C#", "C++"]
-    return render(request, "index.html",  context={"site":"METANIT.COM"})
+    # return render(request, "index.html",  context={"site": "METANIT.COM"})
     # return render(request, "index.html",context={"langs":langs})
     # return render(request, "index.html",context={"data":data})
     # data={"n":5}
@@ -131,3 +143,13 @@ def set(request):
 def get(request):
     usename = request.COOKIES["username"]
     return HttpResponse(f"Hello {usename}")
+
+
+def postuser(request):
+    name = request.POST.get("name", "Undefined")
+    age = request.POST.get("age", 1)
+    langs = request.POST.getlist("languages", ["python"])
+    return HttpResponse(f"""
+                        <div>Name: {name} Age: {age} <div>
+                        <div>languages: {langs}</div>
+                        """)

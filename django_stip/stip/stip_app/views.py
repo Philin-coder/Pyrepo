@@ -12,9 +12,9 @@ from datetime import datetime
 
 def index(request):
     # langs=[]
-    data = {"red": "красный", "green": "зеленый", "blue": "синий"}
-    langs = ["Python", "JavaScript", "Java", "C#", "C++"]
-    return render(request, "index.html", context={"my_date": datetime.now()})
+    # data = {"red": "красный", "green": "зеленый", "blue": "синий"}
+    # langs = ["Python", "JavaScript", "Java", "C#", "C++"]
+    return render(request, "index.html",  context={"site":"METANIT.COM"})
     # return render(request, "index.html",context={"langs":langs})
     # return render(request, "index.html",context={"data":data})
     # data={"n":5}
